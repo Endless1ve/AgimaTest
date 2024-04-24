@@ -5,6 +5,8 @@ $main-color: #000000;
 $light-color: #2f71e5;
 $second-ligth-color: #d1d2d6;
 
+$card-bg: #fff;
+
 @mixin flex-column {
   display: flex;
   flex-direction: column;
