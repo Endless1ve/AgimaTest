@@ -1,0 +1,16 @@
+$font: "RobotoCondensed";
+$main-fonts: $font, Arial, Helvetica, sans-serif;
+
+$main-color: #000000;
+$light-color: #2f71e5;
+$second-ligth-color: #d1d2d6;
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
