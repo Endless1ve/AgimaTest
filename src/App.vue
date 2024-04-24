@@ -9,7 +9,6 @@
   #app {
     font-family: $main-fonts;
     background-color: $second-ligth-color;
-    width: 100vw;
     min-height: 100vh;
     height: 100%;
   }
