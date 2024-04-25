@@ -1,7 +1,9 @@
 <script setup>
   import { useAuthStore } from "@/store/auth";
+  import { useUserStore } from "@/store/user";
   import router from "@/router";
   const auth = useAuthStore();
+  const userStore = useUserStore();
 </script>
 
 <template>
@@ -11,7 +13,7 @@
       Войти
     </p>
     <div v-else class="profile">
-      <p>Логин профиля</p>
+      <p>{{ userStore.login }}</p>
       <p class="headerItem" @click="auth.logOut">Выйти</p>
     </div>
   </header>
