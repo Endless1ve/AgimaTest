@@ -2,6 +2,7 @@
   import { computed } from "vue";
   import { useAuthStore } from "@/store/auth";
   import { useValidationStore } from "@/store/validate";
+  import { useErrorStore } from "@/store/error";
   import { useVuelidate } from "@vuelidate/core";
 
   import InputError from "@/components/UI/InputError.vue";
@@ -11,6 +12,7 @@
   import FormButton from "@/components/UI/FormButton.vue";
 
   const auth = useAuthStore();
+  const error = useErrorStore();
   const validation = useValidationStore();
 
   const loginValue = computed(() => auth.login);
@@ -50,7 +52,11 @@
       </InputError>
       <HiddenError v-else />
     </div>
-
+    <InputError v-if="error.isServerError">Ошибка сервера</InputError>
+    <InputError v-if="auth.isAuthError">
+      Неправильный логин или пароль
+    </InputError>
+    <HiddenError v-else />
     <FormButton>Войти</FormButton>
   </form>
 </template>
