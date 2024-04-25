@@ -2,16 +2,16 @@ import { getUser } from "@/API/users";
 import { defineStore } from "pinia";
 import { ref } from "vue";
 import { useErrorStore } from "./error";
+import { useUserStore } from "./user";
 import router from "@/router";
 
 export const useAuthStore = defineStore("auth", () => {
   const errorStore = useErrorStore();
+  const userStore = useUserStore();
 
   const login = ref("");
   const password = ref("");
   const isAuth = ref(false);
-  const role = ref("guest");
-  const path = "users?login=";
   const isAuthError = ref(false);
 
   async function loginUser() {
@@ -20,12 +20,12 @@ export const useAuthStore = defineStore("auth", () => {
       errorStore.isServerError = false;
 
       const currentPassword = password.value;
-      const response = await getUser(path + login.value);
+      const response = await getUser(login.value);
       const user = response.data[0];
 
       if (user) {
         if (user.password == currentPassword) {
-          role.value = user.role;
+          userStore.setUser(user);
           isAuth.value = true;
           router.push("/");
           resetForm();
@@ -41,9 +41,8 @@ export const useAuthStore = defineStore("auth", () => {
   }
 
   function logOut() {
-    console.log("sas");
-    role.value = "guest";
     isAuth.value = false;
+    userStore.removeUser();
   }
 
   function resetForm() {
@@ -54,7 +53,6 @@ export const useAuthStore = defineStore("auth", () => {
   return {
     login,
     password,
-    role,
     isAuth,
     isAuthError,
     loginUser,
