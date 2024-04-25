@@ -2,6 +2,7 @@ import { getUser } from "@/API/users";
 import { defineStore } from "pinia";
 import { ref } from "vue";
 import { useErrorStore } from "./error";
+import router from "@/router";
 
 export const useAuthStore = defineStore("auth", () => {
   const errorStore = useErrorStore();
@@ -26,6 +27,7 @@ export const useAuthStore = defineStore("auth", () => {
         if (user.password == currentPassword) {
           role.value = user.role;
           isAuth.value = true;
+          router.push("/");
           resetForm();
         } else {
           isAuthError.value = true;
