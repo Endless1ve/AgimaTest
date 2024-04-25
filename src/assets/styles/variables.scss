@@ -2,10 +2,13 @@ $font: "RobotoCondensed";
 $main-fonts: $font, Arial, Helvetica, sans-serif;
 
 $main-color: #000000;
+$white-color: #fff;
 $light-color: #2f71e5;
 $second-ligth-color: #d1d2d6;
 
 $card-bg: #fff;
+
+$error-color: #b51f1f;
 
 @mixin flex-column {
   display: flex;
