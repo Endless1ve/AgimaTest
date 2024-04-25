@@ -1,4 +1,9 @@
+<script setup>
+  import MainHeader from "@/components/MainHeader.vue";
+</script>
+
 <template>
+  <MainHeader />
   <router-view />
 </template>
 
@@ -11,5 +16,6 @@
     background-color: $second-ligth-color;
     min-height: 100vh;
     height: 100%;
+    @include flex-column;
   }
 </style>

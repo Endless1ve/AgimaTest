@@ -41,6 +41,7 @@ export const useAuthStore = defineStore("auth", () => {
   }
 
   function logOut() {
+    console.log("sas");
     role.value = "guest";
     isAuth.value = false;
   }
@@ -57,5 +58,6 @@ export const useAuthStore = defineStore("auth", () => {
     isAuth,
     isAuthError,
     loginUser,
+    logOut,
   };
 });
