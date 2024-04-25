@@ -10,6 +10,8 @@ $card-bg: #fff;
 
 $error-color: #b51f1f;
 
+$opacity-transition: opacity ease 0.5s;
+
 @mixin flex-column {
   display: flex;
   flex-direction: column;

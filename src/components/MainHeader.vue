@@ -37,8 +37,14 @@
     @include flex-row;
   }
 
-  .headerItem:hover {
-    opacity: 0.6;
-    cursor: pointer;
+  .headerItem {
+    transition: $opacity-transition;
+
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+      }
+    }
   }
 </style>
