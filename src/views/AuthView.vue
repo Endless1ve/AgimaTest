@@ -15,5 +15,6 @@
     @include flex-column;
     height: 100vh;
     padding: 10px;
+    flex: 1;
   }
 </style>
