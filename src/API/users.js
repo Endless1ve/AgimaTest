@@ -5,5 +5,5 @@ const userPath = "users?login=";
 const path = API_URL + userPath;
 
 export function getUser(data, params = {}) {
-  return axios.get(path + data, { params });
+  return axios.get(path + data, params);
 }

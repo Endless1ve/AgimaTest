@@ -1,9 +1,9 @@
 import { defineStore } from "pinia";
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 export const useUserStore = defineStore("user", () => {
   const role = ref("guest");
-  const userId = ref(0);
+  const userId = ref(null);
   const login = ref("");
 
   function setUser(user) {
