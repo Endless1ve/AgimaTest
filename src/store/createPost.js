@@ -22,5 +22,13 @@ export const useCreatePostStore = defineStore("createPost", () => {
     });
   }
 
-  function sendPost() {}
+  function sendPost() {
+    console.log("valid");
+  }
+
+  return {
+    title,
+    description,
+    sendPost,
+  };
 });

@@ -10,6 +10,7 @@ import {
 
 export const useValidationStore = defineStore("validation", () => {
   const minPasswordLength = 6;
+
   const authRules = computed(() => ({
     login: {
       required: helpers.withMessage("Поле не должно быть пустым", required),
@@ -33,5 +34,5 @@ export const useValidationStore = defineStore("validation", () => {
     },
   }));
 
-  return { authRules };
+  return { authRules, postRules };
 });
