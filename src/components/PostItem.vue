@@ -3,6 +3,7 @@
   import { useUserStore } from "@/store/user";
   import { clapPost } from "@/API/posts";
 
+  import PostEditors from "@/components/PostEditors.vue";
   import PostButton from "@/components/UI/PostButton.vue";
   import ClapIcon from "@/components/UI/icons/ClapIcon.vue";
 
@@ -24,6 +25,12 @@
   const isClapped = computed(() => {
     return (
       !!clappedUsers.value && clappedUsers.value.includes(userStore.userId)
+    );
+  });
+
+  const canEdit = computed(() => {
+    return (
+      userStore.role === "writer" && $props.post.userId === userStore.userId
     );
   });
 
@@ -53,10 +60,15 @@
     <h3 class="postTitle">{{ post.title }}</h3>
     <p class="postDescription">{{ post.description }}</p>
     <div class="postActions">
-      <PostButton @click="clap" v-if="canClap" :class="{ clapped: isClapped }">
+      <PostButton
+        @click="clap"
+        v-if="canClap"
+        class="clap"
+        :class="{ clapped: isClapped }">
         <ClapIcon :isClapped="isClapped" />
         {{ claps }}
       </PostButton>
+      <PostEditors v-if="canEdit" :postId="post.id" />
     </div>
   </article>
 </template>
@@ -76,8 +88,17 @@
     margin-bottom: 10px;
   }
 
+  .clap {
+    margin-right: auto;
+  }
+
   .clapped {
     color: $light-color;
     border-color: $light-color;
+  }
+
+  .postActions {
+    justify-content: flex-end;
+    @include flex-row;
   }
 </style>

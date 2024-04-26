@@ -19,6 +19,11 @@ const routes = [
     name: "create",
     component: () => import("@/views/CreatePostView.vue"),
   },
+  {
+    path: "/changePost/:id",
+    name: "changePost",
+    component: () => import("@/views/ChangePostView.vue"),
+  },
 ];
 
 const router = createRouter({
@@ -35,7 +40,7 @@ router.beforeEach((to, from) => {
     } else return;
   }
 
-  if (to.name === "create") {
+  if (to.name === "create" || to.name === "changePost") {
     if (auth.isAuth && user.role === "writer") {
       return;
     } else return { name: "home" };
