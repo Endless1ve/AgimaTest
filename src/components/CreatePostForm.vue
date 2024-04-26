@@ -4,7 +4,6 @@
   import { useErrorStore } from "@/store/error";
   import { useValidationStore } from "@/store/validate";
   import { useCreatePostStore } from "@/store/createPost";
-  import { useVuelidate } from "@vuelidate/core";
 
   import FormBase from "@/components/FormBase.vue";
   import InputGroup from "@/components/UI/InputGroup.vue";
@@ -15,6 +14,7 @@
   import InputError from "@/components/UI/InputError.vue";
   import HiddenError from "@/components/UI/HiddenError.vue";
   import FormSuccess from "@/components/UI/FormSuccess.vue";
+  import FormError from "@/components/UI/FormError.vue";
 
   const createPostStore = useCreatePostStore();
   const errorStore = useErrorStore();
@@ -54,7 +54,7 @@
     <FormSuccess v-if="createPostStore.success">
       Пост успешно отправлен
     </FormSuccess>
-    <InputError v-if="errorStore.isServerError">Ошибка сервера</InputError>
+    <FormError v-if="errorStore.isServerError">Ошибка сервера</FormError>
     <FormButton>Создать пост</FormButton>
   </FormBase>
 </template>
