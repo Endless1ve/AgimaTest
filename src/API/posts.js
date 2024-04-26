@@ -22,3 +22,7 @@ export function updatePost(postId, params) {
 export function sendPost(params) {
   return axios.post(postsPath, params);
 }
+
+export function deletePost(postId) {
+  return axios.delete(postsPath + postId);
+}

@@ -3,7 +3,7 @@ import { defineStore } from "pinia";
 import { useUserStore } from "./user";
 import { useErrorStore } from "./error";
 import { usePostsStore } from "./posts";
-import { sendPost, getPost, updatePost } from "@/API/posts";
+import { sendPost, getPost, updatePost, deletePost } from "@/API/posts";
 
 export const usePostStore = defineStore("post", () => {
   const title = ref("");
@@ -95,6 +95,16 @@ export const usePostStore = defineStore("post", () => {
     }
   }
 
+  async function deletePostEvt(id) {
+    try {
+      await deletePost(id);
+
+      postsStore.posts = postsStore.posts.filter((post) => post.id !== id);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return {
     title,
     description,
@@ -105,5 +115,6 @@ export const usePostStore = defineStore("post", () => {
     createPost,
     updateNewPost,
     getPostByID,
+    deletePostEvt,
   };
 });

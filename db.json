@@ -509,26 +509,6 @@
       "updateAt": "2024-04-26T16:03:52.931Z",
       "userId": 1,
       "clappedUsers": []
-    },
-    {
-      "id": "id2709",
-      "title": "AAAAAAAAAAAA",
-      "description": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-      "claps": 0,
-      "createdAt": "2024-04-26T16:07:01.388Z",
-      "updateAt": "2024-04-26T16:07:01.388Z",
-      "userId": 1,
-      "clappedUsers": []
-    },
-    {
-      "id": "id969",
-      "title": "OOOOOOOOOOOOO",
-      "description": "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
-      "claps": 0,
-      "createdAt": "2024-04-26T16:07:01.388Z",
-      "updateAt": "2024-04-26T16:07:01.388Z",
-      "userId": 1,
-      "clappedUsers": []
     }
   ]
 }
