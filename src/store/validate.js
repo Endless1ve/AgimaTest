@@ -9,6 +9,7 @@ import {
   maxLength,
   maxLengthValue,
 } from "@vuelidate/validators";
+import useVuelidate from "@vuelidate/core";
 
 export const useValidationStore = defineStore("validation", () => {
   const minPasswordLength = 6;
@@ -56,5 +57,17 @@ export const useValidationStore = defineStore("validation", () => {
     },
   }));
 
-  return { authRules, postRules };
+  function setupValidation(rules, fields) {
+    return useVuelidate(rules, fields);
+  }
+
+  function validate(v$, callback) {
+    v$.value.$touch();
+    if (!v$.value.$invalid) {
+      callback();
+      v$.value.$reset();
+    }
+  }
+
+  return { authRules, postRules, setupValidation, validate };
 });
