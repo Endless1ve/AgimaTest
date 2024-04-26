@@ -16,21 +16,18 @@
 
   const auth = useAuthStore();
   const error = useErrorStore();
-  const validation = useValidationStore();
+  const validationStore = useValidationStore();
 
-  const loginValue = computed(() => auth.login);
-  const passwordValue = computed(() => auth.password);
+  const login = computed(() => auth.login);
+  const password = computed(() => auth.password);
 
-  const v$ = useVuelidate(validation.authRules, {
-    login: loginValue,
-    password: passwordValue,
+  const v$ = validationStore.setupValidation(validationStore.authRules, {
+    login,
+    password,
   });
 
   const submitForm = () => {
-    v$.value.$touch();
-    if (!v$.value.$invalid) {
-      auth.loginUser();
-    }
+    validationStore.validate(v$, auth.loginUser);
   };
 </script>
 

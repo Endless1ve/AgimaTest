@@ -18,22 +18,18 @@
 
   const createPostStore = useCreatePostStore();
   const errorStore = useErrorStore();
-  const validation = useValidationStore();
+  const validationStore = useValidationStore();
 
-  const titleValue = computed(() => createPostStore.title);
-  const descriptionValue = computed(() => createPostStore.description);
+  const title = computed(() => createPostStore.title);
+  const description = computed(() => createPostStore.description);
 
-  const v$ = useVuelidate(validation.postRules, {
-    title: titleValue,
-    description: descriptionValue,
+  const v$ = validationStore.setupValidation(validationStore.postRules, {
+    title,
+    description,
   });
 
   const submitForm = () => {
-    v$.value.$touch();
-    if (!v$.value.$invalid) {
-      createPostStore.sendNewPost();
-      v$.value.$reset();
-    }
+    validationStore.validate(v$, createPostStore.sendNewPost);
   };
 </script>
 
