@@ -28,6 +28,7 @@
   });
 
   const submitForm = () => {
+    v$.value.$touch();
     if (!v$.value.$invalid) {
       createPostStore.sendPost();
     }
@@ -37,7 +38,7 @@
 <template>
   <FormBase :formTitle="'Создать пост'" @submit.prevent="submitForm">
     <InputGroup>
-      <InputLabel>Заголовок</InputLabel>
+      <InputLabel :name="'title'">Заголовок</InputLabel>
       <FormInput v-model="createPostStore.title" :type="'text'" :id="'title'" />
       <InputError v-if="v$.title.$error">
         {{ v$.title.$errors[0].$message }}
@@ -45,7 +46,7 @@
       <HiddenError v-else />
     </InputGroup>
     <InputGroup>
-      <InputLabel>Описание</InputLabel>
+      <InputLabel :name="'description'">Описание</InputLabel>
       <FormTextarea v-model="createPostStore.description" :id="'description'" />
       <InputError v-if="v$.description.$error">
         {{ v$.description.$errors[0].$message }}
