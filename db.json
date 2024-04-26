@@ -34,10 +34,7 @@
       "createdAt": "2023-01-15T08:00:00.000Z",
       "updateAt": "2023-01-15T08:00:00.000Z",
       "userId": 1,
-      "clappedUsers": [
-        2,
-        4
-      ]
+      "clappedUsers": [2, 4]
     },
     {
       "id": "2",
@@ -47,9 +44,7 @@
       "createdAt": "2023-02-05T10:30:00.000Z",
       "updateAt": "2023-02-05T10:30:00.000Z",
       "userId": 1,
-      "clappedUsers": [
-        2
-      ]
+      "clappedUsers": [2]
     },
     {
       "id": "3",
@@ -59,9 +54,7 @@
       "createdAt": "2023-02-20T12:45:00.000Z",
       "updateAt": "2023-02-20T12:45:00.000Z",
       "userId": 1,
-      "clappedUsers": [
-        2
-      ]
+      "clappedUsers": [2]
     },
     {
       "id": "4",
@@ -71,9 +64,7 @@
       "createdAt": "2023-03-10T15:00:00.000Z",
       "updateAt": "2023-03-10T15:00:00.000Z",
       "userId": 1,
-      "clappedUsers": [
-        2
-      ]
+      "clappedUsers": [2]
     },
     {
       "id": "5",
@@ -83,9 +74,7 @@
       "createdAt": "2023-04-01T18:30:00.000Z",
       "updateAt": "2023-04-01T18:30:00.000Z",
       "userId": 1,
-      "clappedUsers": [
-        2
-      ]
+      "clappedUsers": [2]
     },
     {
       "id": "6",
@@ -95,9 +84,7 @@
       "createdAt": "2023-05-10T09:00:00.000Z",
       "updateAt": "2023-05-10T09:00:00.000Z",
       "userId": 1,
-      "clappedUsers": [
-        2
-      ]
+      "clappedUsers": [2]
     },
     {
       "id": "7",
@@ -107,10 +94,7 @@
       "createdAt": "2023-06-05T14:15:00.000Z",
       "updateAt": "2023-06-05T14:15:00.000Z",
       "userId": 3,
-      "clappedUsers": [
-        2,
-        1
-      ]
+      "clappedUsers": [2, 1]
     },
     {
       "id": "8",
@@ -120,9 +104,7 @@
       "createdAt": "2023-07-01T11:45:00.000Z",
       "updateAt": "2023-07-01T11:45:00.000Z",
       "userId": 1,
-      "clappedUsers": [
-        2
-      ]
+      "clappedUsers": [2]
     },
     {
       "id": "9",
@@ -213,9 +195,7 @@
       "createdAt": "2024-05-10T16:00:00.000Z",
       "updateAt": "2024-05-10T16:00:00.000Z",
       "userId": 1,
-      "clappedUsers": [
-        2
-      ]
+      "clappedUsers": [2]
     },
     {
       "id": "19",
@@ -486,9 +466,7 @@
       "createdAt": "2026-11-01T08:45:00.000Z",
       "updateAt": "2026-11-01T08:45:00.000Z",
       "userId": 1,
-      "clappedUsers": [
-        2
-      ]
+      "clappedUsers": [2]
     },
     {
       "id": "49",
@@ -498,9 +476,7 @@
       "createdAt": "2026-12-01T10:30:00.000Z",
       "updateAt": "2026-12-01T10:30:00.000Z",
       "userId": 1,
-      "clappedUsers": [
-        2
-      ]
+      "clappedUsers": [2]
     },
     {
       "id": "50",
@@ -510,69 +486,7 @@
       "createdAt": "2027-01-01T12:15:00.000Z",
       "updateAt": "2027-01-01T12:15:00.000Z",
       "userId": 1,
-      "clappedUsers": [
-        2
-      ]
-    },
-    {
-      "id": "id6492",
-      "title": "writer@mail.com",
-      "description": "writer@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.com",
-      "claps": 0,
-      "createdAt": "2024-04-26T12:43:29.801Z",
-      "updateAt": "2024-04-26T12:43:29.801Z",
-      "userId": 1,
-      "clappedUsers": []
-    },
-    {
-      "id": "id8100",
-      "title": "writer@mail.com",
-      "description": "writer@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.com",
-      "claps": 0,
-      "createdAt": "2024-04-26T12:45:31.560Z",
-      "updateAt": "2024-04-26T12:45:31.560Z",
-      "userId": 1,
-      "clappedUsers": []
-    },
-    {
-      "id": "id276",
-      "title": "writer@mail.com",
-      "description": "writer@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.com",
-      "claps": 0,
-      "createdAt": "2024-04-26T12:45:31.560Z",
-      "updateAt": "2024-04-26T12:45:31.560Z",
-      "userId": 1,
-      "clappedUsers": []
-    },
-    {
-      "id": "id6672",
-      "title": "writer@mail.com",
-      "description": "writer@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.com",
-      "claps": 0,
-      "createdAt": "2024-04-26T12:46:29.244Z",
-      "updateAt": "2024-04-26T12:46:29.244Z",
-      "userId": 1,
-      "clappedUsers": []
-    },
-    {
-      "id": "id5561",
-      "title": "writer2@mail.com",
-      "description": "writer2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.com",
-      "claps": 0,
-      "createdAt": "2024-04-26T13:02:11.311Z",
-      "updateAt": "2024-04-26T13:02:11.311Z",
-      "userId": 3,
-      "clappedUsers": []
-    },
-    {
-      "id": "id2907",
-      "title": "writer2@mail.com",
-      "description": "writer2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.com",
-      "claps": 0,
-      "createdAt": "2024-04-26T13:02:11.311Z",
-      "updateAt": "2024-04-26T13:02:11.311Z",
-      "userId": 3,
-      "clappedUsers": []
+      "clappedUsers": [2]
     }
   ]
 }

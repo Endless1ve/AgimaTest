@@ -14,6 +14,7 @@
   import FormTextarea from "@/components/UI/FormTextarea.vue";
   import InputError from "@/components/UI/InputError.vue";
   import HiddenError from "@/components/UI/HiddenError.vue";
+  import FormSuccess from "@/components/UI/FormSuccess.vue";
 
   const createPostStore = useCreatePostStore();
   const errorStore = useErrorStore();
@@ -54,7 +55,10 @@
       </InputError>
       <HiddenError v-else />
     </InputGroup>
-    <InputError>Ошибка сервера</InputError>
+    <FormSuccess v-if="createPostStore.success">
+      Пост успешно отправлен
+    </FormSuccess>
+    <InputError v-if="errorStore.isServerError">Ошибка сервера</InputError>
     <FormButton>Создать пост</FormButton>
   </FormBase>
 </template>

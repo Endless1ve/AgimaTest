@@ -7,6 +7,7 @@ import { sendPost } from "@/API/posts";
 export const useCreatePostStore = defineStore("createPost", () => {
   const title = ref("");
   const description = ref("");
+  const success = ref(false);
   const currentDate = new Date().toISOString();
 
   const userStore = useUserStore();
@@ -32,10 +33,12 @@ export const useCreatePostStore = defineStore("createPost", () => {
 
   async function sendNewPost() {
     try {
+      success.value = false;
       errorStore.isServerError = false;
       const newPost = createPost();
       const response = await sendPost(newPost);
       clearForm();
+      success.value = true;
     } catch (error) {
       errorStore.isServerError = true;
     }
@@ -44,6 +47,7 @@ export const useCreatePostStore = defineStore("createPost", () => {
   return {
     title,
     description,
+    success,
     sendNewPost,
     createPost,
   };
