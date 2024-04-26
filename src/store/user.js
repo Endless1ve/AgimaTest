@@ -1,10 +1,17 @@
 import { defineStore } from "pinia";
 import { ref, computed } from "vue";
+import { useAuthStore } from "./auth";
 
 export const useUserStore = defineStore("user", () => {
   const role = ref("guest");
   const userId = ref(null);
   const login = ref("");
+
+  const authStore = useAuthStore();
+
+  const canCreatePost = computed(() => {
+    return role.value === "writer" && authStore.isAuth;
+  });
 
   function setUser(user) {
     role.value = user.role;
@@ -18,5 +25,5 @@ export const useUserStore = defineStore("user", () => {
     login.value = "";
   }
 
-  return { role, userId, login, setUser, removeUser };
+  return { role, userId, login, canCreatePost, setUser, removeUser };
 });

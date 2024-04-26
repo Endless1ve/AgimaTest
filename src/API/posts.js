@@ -10,3 +10,7 @@ export function getPosts(params) {
 export function clapPost(postId, params) {
   return axios.patch(postsPath + postId, params);
 }
+
+export function sendPost(params) {
+  return axios.post(postsPath, params);
+}

@@ -2,19 +2,28 @@
   import { useAuthStore } from "@/store/auth";
   import { useUserStore } from "@/store/user";
   import router from "@/router";
-  const auth = useAuthStore();
+  const authStore = useAuthStore();
   const userStore = useUserStore();
 </script>
 
 <template>
   <header class="header">
     <p class="headerItem" @click="router.push('/')">Посты</p>
-    <p v-if="!auth.isAuth" class="headerItem" @click="router.push('/login')">
+    <p
+      v-if="userStore.canCreatePost"
+      class="headerItem"
+      @click="router.push('/create')">
+      Создать пост
+    </p>
+    <p
+      v-if="!authStore.isAuth"
+      class="headerItem"
+      @click="router.push('/login')">
       Войти
     </p>
     <div v-else class="profile">
       <p>{{ userStore.login }}</p>
-      <p class="headerItem" @click="auth.logOut">Выйти</p>
+      <p class="headerItem" @click="authStore.logOut">Выйти</p>
     </div>
   </header>
 </template>

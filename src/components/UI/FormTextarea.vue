@@ -1,10 +1,6 @@
 <script setup>
   const emit = defineEmits(["update:modelValue"]);
   const $props = defineProps({
-    type: {
-      type: String,
-      required: true,
-    },
     id: {
       type: String,
       required: true,
@@ -21,17 +17,19 @@
 </script>
 
 <template>
-  <input
-    class="formInput"
+  <textarea
+    class="textarea"
+    :id="id"
+    cols="20"
+    rows="5"
     :value="modelValue"
-    @input="handleChange"
-    :type="type"
-    :id="id" />
+    @input="handleChange"></textarea>
 </template>
 
 <style lang="scss" scoped>
-  .formInput {
-    padding: 5px;
+  .textarea {
+    resize: none;
     outline: none;
+    padding: 10px;
   }
 </style>
