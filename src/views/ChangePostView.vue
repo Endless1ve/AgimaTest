@@ -1,5 +1,16 @@
 <script setup>
+  import { onMounted } from "vue";
+  import { useRoute } from "vue-router";
   import ChangePostForm from "@/components/ChangePostForm.vue";
+  import { usePostStore } from "@/store/post";
+
+  const route = useRoute();
+  const postId = route.params.id;
+  const postStore = usePostStore();
+
+  onMounted(() => {
+    postStore.getPostByID(postId);
+  });
 </script>
 
 <template>
