@@ -27,44 +27,16 @@
   ],
   "posts": [
     {
-      "id": "1",
-      "title": "Путешествие в долину цветов",
-      "description": "Захватывающее приключение в мир цветов и ароматов. В этом посте мы расскажем о нашем увлекательном путешествии в долину цветов, где каждый цветок рассказывает свою историю.",
-      "claps": 61,
-      "createdAt": "2023-01-15T08:00:00.000Z",
-      "updateAt": "2023-01-15T08:00:00.000Z",
-      "userId": 1,
-      "clappedUsers": [2, 4]
-    },
-    {
-      "id": "2",
-      "title": "Тайна загадочного острова",
-      "description": "Раскройте тайны загадочного острова вместе с нами. В этом посте мы отправимся в увлекательное путешествие на загадочный остров, где каждый уголок скрывает свои секреты и загадки.",
-      "claps": 26,
-      "createdAt": "2023-02-05T10:30:00.000Z",
-      "updateAt": "2023-02-05T10:30:00.000Z",
-      "userId": 1,
-      "clappedUsers": [2]
-    },
-    {
-      "id": "3",
-      "title": "Искусство путешествия одним",
-      "description": "Откройте для себя удовольствие от путешествия в одиночестве. В этом посте мы поделимся с вами советами и историями о том, как путешествие в одиночку может изменить ваш взгляд на мир.",
-      "claps": 14,
-      "createdAt": "2023-02-20T12:45:00.000Z",
-      "updateAt": "2023-02-20T12:45:00.000Z",
-      "userId": 1,
-      "clappedUsers": [2]
-    },
-    {
       "id": "4",
       "title": "Секреты здорового образа жизни",
-      "description": "Откройте для себя секреты здорового образа жизни. В этом посте мы расскажем о здоровых привычках, правильном питании и активном образе жизни, которые помогут вам чувствовать себя лучше каждый день.",
+      "description": "Откройте для себя секреты здорового образа жизни. Откройте для себя секреты здорового образа жизни.",
       "claps": 36,
       "createdAt": "2023-03-10T15:00:00.000Z",
-      "updateAt": "2023-03-10T15:00:00.000Z",
+      "updateAt": "2024-04-26T16:45:42.072Z",
       "userId": 1,
-      "clappedUsers": [2]
+      "clappedUsers": [
+        2
+      ]
     },
     {
       "id": "5",
@@ -74,7 +46,9 @@
       "createdAt": "2023-04-01T18:30:00.000Z",
       "updateAt": "2023-04-01T18:30:00.000Z",
       "userId": 1,
-      "clappedUsers": [2]
+      "clappedUsers": [
+        2
+      ]
     },
     {
       "id": "6",
@@ -84,17 +58,22 @@
       "createdAt": "2023-05-10T09:00:00.000Z",
       "updateAt": "2023-05-10T09:00:00.000Z",
       "userId": 1,
-      "clappedUsers": [2]
+      "clappedUsers": [
+        2
+      ]
     },
     {
       "id": "7",
       "title": "Искусство медитации: путь к внутреннему спокойствию",
       "description": "Медитация - это искусство обретения внутреннего спокойствия и гармонии. В этом посте мы расскажем о том, как практика медитации может помочь вам найти внутренний покой и гармонию в суете повседневной жизни.",
-      "claps": 30,
+      "claps": 51,
       "createdAt": "2023-06-05T14:15:00.000Z",
       "updateAt": "2023-06-05T14:15:00.000Z",
       "userId": 3,
-      "clappedUsers": [2, 1]
+      "clappedUsers": [
+        2,
+        1
+      ]
     },
     {
       "id": "8",
@@ -104,7 +83,9 @@
       "createdAt": "2023-07-01T11:45:00.000Z",
       "updateAt": "2023-07-01T11:45:00.000Z",
       "userId": 1,
-      "clappedUsers": [2]
+      "clappedUsers": [
+        2
+      ]
     },
     {
       "id": "9",
@@ -128,10 +109,13 @@
       "id": "11",
       "title": "Магия зимних праздников: вдохновение и тепло",
       "description": "Зимние праздники наполнены волшебством и теплом. В этом посте мы расскажем о магии зимних праздников и поделимся идеями, как сделать их незабываемыми для вас и ваших близких.",
-      "claps": 31,
+      "claps": 32,
       "createdAt": "2023-10-01T09:45:00.000Z",
       "updateAt": "2023-10-01T09:45:00.000Z",
-      "userId": 3
+      "userId": 3,
+      "clappedUsers": [
+        1
+      ]
     },
     {
       "id": "12",
@@ -195,7 +179,9 @@
       "createdAt": "2024-05-10T16:00:00.000Z",
       "updateAt": "2024-05-10T16:00:00.000Z",
       "userId": 1,
-      "clappedUsers": [2]
+      "clappedUsers": [
+        2
+      ]
     },
     {
       "id": "19",
@@ -466,7 +452,9 @@
       "createdAt": "2026-11-01T08:45:00.000Z",
       "updateAt": "2026-11-01T08:45:00.000Z",
       "userId": 1,
-      "clappedUsers": [2]
+      "clappedUsers": [
+        2
+      ]
     },
     {
       "id": "49",
@@ -476,7 +464,9 @@
       "createdAt": "2026-12-01T10:30:00.000Z",
       "updateAt": "2026-12-01T10:30:00.000Z",
       "userId": 1,
-      "clappedUsers": [2]
+      "clappedUsers": [
+        2
+      ]
     },
     {
       "id": "50",
@@ -486,7 +476,39 @@
       "createdAt": "2027-01-01T12:15:00.000Z",
       "updateAt": "2027-01-01T12:15:00.000Z",
       "userId": 1,
-      "clappedUsers": [2]
+      "clappedUsers": [
+        2
+      ]
+    },
+    {
+      "id": "id139",
+      "title": "awdawdawdawd",
+      "description": "awdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawd",
+      "claps": 0,
+      "createdAt": "2024-04-26T15:53:28.899Z",
+      "updateAt": "2024-04-26T15:53:28.899Z",
+      "userId": 1,
+      "clappedUsers": []
+    },
+    {
+      "id": "id9164",
+      "title": "const route = useRoute(); const postId = route.params.id; console.log(postId);",
+      "description": "const route = useRoute();\nconst postId = route.params.id;\nconsole.log(postId);",
+      "claps": 0,
+      "createdAt": "2024-04-26T16:03:52.931Z",
+      "updateAt": "2024-04-26T16:03:52.931Z",
+      "userId": 1,
+      "clappedUsers": []
+    },
+    {
+      "id": "id4081",
+      "title": "import { usePostsStore } from \"./posts\";",
+      "description": "import { usePostsStore } from \"./posts\";import { usePostsStore } from \"./posts\";import { usePostsStore } from \"./posts\";",
+      "claps": 0,
+      "createdAt": "2024-04-26T16:03:52.931Z",
+      "updateAt": "2024-04-26T16:03:52.931Z",
+      "userId": 1,
+      "clappedUsers": []
     }
   ]
 }

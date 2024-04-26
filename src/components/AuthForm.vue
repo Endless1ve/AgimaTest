@@ -35,7 +35,11 @@
   <FormBase :formTitle="'Авторизоваться'" @submit.prevent="submitForm">
     <InputGroup>
       <InputLabel :name="'login'">Логин</InputLabel>
-      <FormInput v-model="auth.login" :type="'text'" :id="'login'" />
+      <FormInput
+        v-model="auth.login"
+        :type="'text'"
+        :id="'login'"
+        autocomplete="email" />
       <InputError v-if="v$.login.$error">
         {{ v$.login.$errors[0].$message }}
       </InputError>
@@ -44,7 +48,11 @@
 
     <InputGroup>
       <InputLabel :name="'password'">Пароль</InputLabel>
-      <FormInput v-model="auth.password" :type="'text'" :id="'password'" />
+      <FormInput
+        v-model="auth.password"
+        :type="'password'"
+        :id="'password'"
+        autocomplete="current-password" />
       <InputError v-if="v$.password.$error">
         {{ v$.password.$errors[0].$message }}
       </InputError>
