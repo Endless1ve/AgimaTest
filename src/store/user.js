@@ -10,7 +10,6 @@ export const useUserStore = defineStore("user", () => {
   const authStore = useAuthStore();
 
   const canCreatePost = computed(() => {
-    console.log(authStore.isAuth);
     return role.value === "writer" && authStore.isAuth;
   });
 

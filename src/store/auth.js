@@ -42,6 +42,7 @@ export const useAuthStore = defineStore("auth", () => {
 
   function logOut() {
     isAuth.value = false;
+    router.push("/");
     userStore.removeUser();
   }
 

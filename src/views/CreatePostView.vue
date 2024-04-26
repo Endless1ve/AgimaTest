@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  <div class="createPost"><CreatePostForm /></div>
+  <div class="createPost">
+    <CreatePostForm />
+  </div>
 </template>
 
 <style lang="scss" scoped>

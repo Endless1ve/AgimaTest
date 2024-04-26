@@ -16,7 +16,7 @@
       "id": 3,
       "login": "writer2@mail.com",
       "password": 1234567,
-      "role": "reader"
+      "role": "writer"
     },
     {
       "id": 4,
@@ -103,7 +103,7 @@
       "id": "7",
       "title": "Искусство медитации: путь к внутреннему спокойствию",
       "description": "Медитация - это искусство обретения внутреннего спокойствия и гармонии. В этом посте мы расскажем о том, как практика медитации может помочь вам найти внутренний покой и гармонию в суете повседневной жизни.",
-      "claps": 19,
+      "claps": 30,
       "createdAt": "2023-06-05T14:15:00.000Z",
       "updateAt": "2023-06-05T14:15:00.000Z",
       "userId": 3,
@@ -513,6 +513,66 @@
       "clappedUsers": [
         2
       ]
+    },
+    {
+      "id": "id6492",
+      "title": "writer@mail.com",
+      "description": "writer@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.com",
+      "claps": 0,
+      "createdAt": "2024-04-26T12:43:29.801Z",
+      "updateAt": "2024-04-26T12:43:29.801Z",
+      "userId": 1,
+      "clappedUsers": []
+    },
+    {
+      "id": "id8100",
+      "title": "writer@mail.com",
+      "description": "writer@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.com",
+      "claps": 0,
+      "createdAt": "2024-04-26T12:45:31.560Z",
+      "updateAt": "2024-04-26T12:45:31.560Z",
+      "userId": 1,
+      "clappedUsers": []
+    },
+    {
+      "id": "id276",
+      "title": "writer@mail.com",
+      "description": "writer@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.com",
+      "claps": 0,
+      "createdAt": "2024-04-26T12:45:31.560Z",
+      "updateAt": "2024-04-26T12:45:31.560Z",
+      "userId": 1,
+      "clappedUsers": []
+    },
+    {
+      "id": "id6672",
+      "title": "writer@mail.com",
+      "description": "writer@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.comwriter@mail.com",
+      "claps": 0,
+      "createdAt": "2024-04-26T12:46:29.244Z",
+      "updateAt": "2024-04-26T12:46:29.244Z",
+      "userId": 1,
+      "clappedUsers": []
+    },
+    {
+      "id": "id5561",
+      "title": "writer2@mail.com",
+      "description": "writer2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.com",
+      "claps": 0,
+      "createdAt": "2024-04-26T13:02:11.311Z",
+      "updateAt": "2024-04-26T13:02:11.311Z",
+      "userId": 3,
+      "clappedUsers": []
+    },
+    {
+      "id": "id2907",
+      "title": "writer2@mail.com",
+      "description": "writer2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.comwriter2@mail.com",
+      "claps": 0,
+      "createdAt": "2024-04-26T13:02:11.311Z",
+      "updateAt": "2024-04-26T13:02:11.311Z",
+      "userId": 3,
+      "clappedUsers": []
     }
   ]
 }

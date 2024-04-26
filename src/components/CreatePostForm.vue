@@ -30,7 +30,8 @@
   const submitForm = () => {
     v$.value.$touch();
     if (!v$.value.$invalid) {
-      createPostStore.sendPost();
+      createPostStore.sendNewPost();
+      v$.value.$reset();
     }
   };
 </script>
@@ -53,13 +54,9 @@
       </InputError>
       <HiddenError v-else />
     </InputGroup>
-    <InputError class="formError">Ошибка сервера</InputError>
+    <InputError>Ошибка сервера</InputError>
     <FormButton>Создать пост</FormButton>
   </FormBase>
 </template>
 
-<style lang="scss" scoped>
-  .formError {
-    text-align: center;
-  }
-</style>
+<style lang="scss" scoped></style>
