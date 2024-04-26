@@ -14,14 +14,13 @@ export const usePostsStore = defineStore("posts", () => {
     if (page.value <= allPages.value) {
       try {
         //получение постов
-        const response = await getPosts(postsPath, {
+        const response = await getPosts({
           _page: page.value,
           _per_page: limit,
         });
 
         //установка значения общего количества страниц
         allPages.value = response.data.pages;
-
         posts.value.push(...response.data.data);
 
         //увеличение страницы на 1 после запроса

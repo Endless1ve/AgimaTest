@@ -16,6 +16,7 @@
     gap: 3px;
     transition: $opacity-transition;
     @include flex-row;
+    border-radius: 10px;
 
     @media (hover: hover) {
       &:hover {

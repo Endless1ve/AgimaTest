@@ -30,6 +30,7 @@
     color: $white-color;
     justify-content: space-between;
     @include flex-row;
+    z-index: 10;
   }
 
   .profile {

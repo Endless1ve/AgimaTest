@@ -1,6 +1,7 @@
 <script setup>
-  import { computed } from "vue";
+  import { ref, computed } from "vue";
   import { useUserStore } from "@/store/user";
+  import { clapPost } from "@/API/posts";
 
   import PostButton from "@/components/UI/PostButton.vue";
   import ClapIcon from "@/components/UI/icons/ClapIcon.vue";
@@ -13,12 +14,38 @@
   });
 
   const userStore = useUserStore();
+  const claps = ref($props.post.claps);
+  const clappedUsers = ref($props.post.clappedUsers);
 
   const canClap = computed(() => {
+    return userStore.role !== "guest" && $props.post.userId != userStore.userId;
+  });
+
+  const isClapped = computed(() => {
     return (
-      userStore.role !== "guest" && $props.post.userId !== useUserStore.userId
+      !!clappedUsers.value && clappedUsers.value.includes(userStore.userId)
     );
   });
+
+  const clap = async () => {
+    try {
+      const newClappedUsers = clappedUsers.value ? [...clappedUsers.value] : [];
+
+      if (!newClappedUsers.includes(userStore.userId)) {
+        newClappedUsers.push(userStore.userId);
+      }
+
+      const response = await clapPost($props.post.id, {
+        claps: claps.value + 1,
+        clappedUsers: newClappedUsers,
+      });
+
+      claps.value = response.data.claps;
+      clappedUsers.value = response.data.clappedUsers;
+    } catch (error) {
+      console.log(error);
+    }
+  };
 </script>
 
 <template>
@@ -26,9 +53,9 @@
     <h3 class="postTitle">{{ post.title }}</h3>
     <p class="postDescription">{{ post.description }}</p>
     <div class="postActions">
-      <PostButton>
-        <ClapIcon />
-        {{ post.claps }}
+      <PostButton @click="clap" v-if="canClap" :class="{ clapped: isClapped }">
+        <ClapIcon :isClapped="isClapped" />
+        {{ claps }}
       </PostButton>
     </div>
   </article>
@@ -47,5 +74,10 @@
 
   .postTitle {
     margin-bottom: 10px;
+  }
+
+  .clapped {
+    color: $light-color;
+    border-color: $light-color;
   }
 </style>
