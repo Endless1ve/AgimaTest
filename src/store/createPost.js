@@ -1,9 +1,12 @@
 import { ref } from "vue";
+
 import { defineStore } from "pinia";
-import { useFormsStore } from "./forms";
+
+import { useFormsStore } from "@/store/forms";
+import { useUserStore } from "@/store/user";
+import { usePostsStore } from "@/store/posts";
+
 import { getCurrentDate } from "@/API/date";
-import { useUserStore } from "./user";
-import { usePostsStore } from "./posts";
 import { sendPostAPI } from "@/API/posts";
 
 export const useCreatePostStore = defineStore("createPost", () => {

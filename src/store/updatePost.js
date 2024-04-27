@@ -5,8 +5,8 @@ import { defineStore } from "pinia";
 import { getCurrentDate } from "@/API/date";
 import { getPostAPI, updatePostAPI } from "@/API/posts";
 
-import { useFormsStore } from "./forms";
-import { usePostsStore } from "./posts";
+import { useFormsStore } from "@/store/forms";
+import { usePostsStore } from "@/store/posts";
 
 export const useUpdatePostStore = defineStore("updatePost", () => {
   const title = ref("");
