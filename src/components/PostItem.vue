@@ -3,7 +3,7 @@
 
   import { useUserStore } from "@/store/user";
 
-  import { clapPost } from "@/API/posts";
+  import { clapPostAPI } from "@/API/posts";
   import { getFormattedDate } from "@/API/date";
 
   import PostEditors from "@/components/PostEditors.vue";
@@ -46,7 +46,7 @@
         newClappedUsers.push(userStore.userId);
       }
 
-      const response = await clapPost($props.post.id, {
+      const response = await clapPostAPI($props.post.id, {
         claps: claps.value + 1,
         clappedUsers: newClappedUsers,
       });
