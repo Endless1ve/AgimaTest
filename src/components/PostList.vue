@@ -1,6 +1,8 @@
 <script setup>
   import { ref, onMounted } from "vue";
+
   import { usePostsStore } from "@/store/posts";
+
   import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
   import PostItem from "@/components/PostItem.vue";

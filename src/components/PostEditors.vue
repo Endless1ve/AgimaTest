@@ -1,6 +1,8 @@
 <script setup>
   import router from "@/router";
+
   import { usePostStore } from "@/store/post";
+
   import PostButton from "@/components/UI/PostButton.vue";
 
   const $props = defineProps({

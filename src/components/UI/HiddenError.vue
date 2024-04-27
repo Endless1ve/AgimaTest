@@ -1,3 +1,8 @@
+<script setup>
+  //решение для фикса отсутствия имени компонента
+  defineProps();
+</script>
+
 <template>
   <div class="hiddenError"></div>
 </template>

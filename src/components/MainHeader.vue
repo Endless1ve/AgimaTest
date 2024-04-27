@@ -1,7 +1,9 @@
 <script setup>
+  import router from "@/router";
+
   import { useAuthStore } from "@/store/auth";
   import { useUserStore } from "@/store/user";
-  import router from "@/router";
+
   const authStore = useAuthStore();
   const userStore = useUserStore();
 </script>

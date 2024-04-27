@@ -1,10 +1,13 @@
+<script setup>
+  //решение для фикса отсутствия имени компонента
+  defineProps();
+</script>
+
 <template>
   <div class="inputGroup">
     <slot></slot>
   </div>
 </template>
-
-<script setup></script>
 
 <style lang="scss" scoped>
   .inputGroup {
