@@ -16,6 +16,7 @@ export const usePostsStore = defineStore("posts", () => {
         const response = await getPostsAPI({
           _page: page.value,
           _per_page: limit,
+          _sort: "-updateAt",
         });
 
         allPages.value = response.data.pages;

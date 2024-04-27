@@ -17,7 +17,7 @@ export const useUserStore = defineStore("user", () => {
 
   function setUser(user) {
     role.value = user.role;
-    userId.value = user.id;
+    userId.value = Number(user.id);
     login.value = user.login;
   }
 
