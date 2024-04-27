@@ -32,9 +32,11 @@
       "description": "Откройте для себя секреты здорового образа жизни. Откройте для себя секреты здорового образа жизни.Откройте для себя секреты здорового образа жизни. Откройте для себя секреты здорового образа жизни.",
       "claps": 36,
       "createdAt": "2023-03-10T15:00:00.000Z",
-      "updateAt": "2024-04-26T17:18:42.745Z",
+      "updateAt": "2024-04-27T13:26:04.519Z",
       "userId": 1,
-      "clappedUsers": [2]
+      "clappedUsers": [
+        2
+      ]
     },
     {
       "id": "5",
@@ -44,7 +46,9 @@
       "createdAt": "2023-04-01T18:30:00.000Z",
       "updateAt": "2023-04-01T18:30:00.000Z",
       "userId": 1,
-      "clappedUsers": [2]
+      "clappedUsers": [
+        2
+      ]
     },
     {
       "id": "6",
@@ -54,7 +58,9 @@
       "createdAt": "2023-05-10T09:00:00.000Z",
       "updateAt": "2023-05-10T09:00:00.000Z",
       "userId": 1,
-      "clappedUsers": [2]
+      "clappedUsers": [
+        2
+      ]
     },
     {
       "id": "7",
@@ -64,7 +70,11 @@
       "createdAt": "2023-06-05T14:15:00.000Z",
       "updateAt": "2023-06-05T14:15:00.000Z",
       "userId": 3,
-      "clappedUsers": [2, 1, "1"]
+      "clappedUsers": [
+        2,
+        1,
+        "1"
+      ]
     },
     {
       "id": "8",
@@ -74,7 +84,9 @@
       "createdAt": "2023-07-01T11:45:00.000Z",
       "updateAt": "2023-07-01T11:45:00.000Z",
       "userId": 1,
-      "clappedUsers": [2]
+      "clappedUsers": [
+        2
+      ]
     },
     {
       "id": "9",
@@ -102,7 +114,9 @@
       "createdAt": "2023-10-01T09:45:00.000Z",
       "updateAt": "2023-10-01T09:45:00.000Z",
       "userId": 3,
-      "clappedUsers": [1]
+      "clappedUsers": [
+        1
+      ]
     },
     {
       "id": "12",
@@ -148,7 +162,9 @@
       "createdAt": "2024-03-10T12:00:00.000Z",
       "updateAt": "2024-03-10T12:00:00.000Z",
       "userId": 1,
-      "clappedUsers": [2]
+      "clappedUsers": [
+        2
+      ]
     },
     {
       "id": "17",
@@ -158,7 +174,9 @@
       "createdAt": "2024-04-01T14:30:00.000Z",
       "updateAt": "2024-04-01T14:30:00.000Z",
       "userId": 1,
-      "clappedUsers": [2]
+      "clappedUsers": [
+        2
+      ]
     },
     {
       "id": "18",
@@ -168,7 +186,9 @@
       "createdAt": "2024-05-10T16:00:00.000Z",
       "updateAt": "2024-05-10T16:00:00.000Z",
       "userId": 1,
-      "clappedUsers": [2]
+      "clappedUsers": [
+        2
+      ]
     },
     {
       "id": "19",
@@ -178,7 +198,9 @@
       "createdAt": "2024-06-05T18:15:00.000Z",
       "updateAt": "2024-06-05T18:15:00.000Z",
       "userId": 3,
-      "clappedUsers": [1]
+      "clappedUsers": [
+        1
+      ]
     },
     {
       "id": "20",
@@ -440,7 +462,9 @@
       "createdAt": "2026-11-01T08:45:00.000Z",
       "updateAt": "2026-11-01T08:45:00.000Z",
       "userId": 1,
-      "clappedUsers": [2]
+      "clappedUsers": [
+        2
+      ]
     },
     {
       "id": "49",
@@ -450,7 +474,9 @@
       "createdAt": "2026-12-01T10:30:00.000Z",
       "updateAt": "2026-12-01T10:30:00.000Z",
       "userId": 1,
-      "clappedUsers": [2]
+      "clappedUsers": [
+        2
+      ]
     },
     {
       "id": "50",
@@ -460,7 +486,9 @@
       "createdAt": "2027-01-01T12:15:00.000Z",
       "updateAt": "2027-01-01T12:15:00.000Z",
       "userId": 1,
-      "clappedUsers": [2]
+      "clappedUsers": [
+        2
+      ]
     }
   ]
 }

@@ -1,12 +1,12 @@
 <script setup>
   import { computed, onBeforeUnmount } from "vue";
 
-  import { useErrorStore } from "@/store/error";
   import { useValidationStore } from "@/store/validate";
   import { usePostStore } from "@/store/post";
+  import { useFormsStore } from "@/store/forms";
 
   const postStore = usePostStore();
-  const errorStore = useErrorStore();
+  const formsStore = useFormsStore();
   const validationStore = useValidationStore();
 
   const title = computed(() => postStore.changedTitle);
@@ -47,8 +47,10 @@
       </InputError>
       <HiddenError v-else />
     </InputGroup>
-    <FormSuccess v-if="postStore.success">Пост успешно изменен</FormSuccess>
-    <FormError v-if="errorStore.isServerError">Ошибка сервера</FormError>
+    <FormSuccess v-if="formsStore.isFormSuccess">
+      Пост успешно изменен
+    </FormSuccess>
+    <FormError v-if="formsStore.isFormError">Ошибка сервера</FormError>
     <FormButton>Обновить пост</FormButton>
   </FormBase>
 </template>

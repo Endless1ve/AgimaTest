@@ -6,22 +6,22 @@ import router from "@/router";
 
 import { getUser } from "@/API/users";
 
-import { useErrorStore } from "@/store/error";
 import { useUserStore } from "@/store/user";
+import { useFormsStore } from "@/store/forms";
 
 export const useAuthStore = defineStore("auth", () => {
-  const errorStore = useErrorStore();
-  const userStore = useUserStore();
-
   const login = ref("");
   const password = ref("");
-  const isAuth = ref(false);
+  const isAuth = ref(true);
   const isAuthError = ref(false);
+
+  const userStore = useUserStore();
+  const formsStore = useFormsStore();
 
   async function loginUser() {
     try {
       isAuthError.value = false;
-      errorStore.isServerError = false;
+      formsStore.setError(false);
 
       const currentPassword = password.value;
       const response = await getUser(login.value);
@@ -32,7 +32,8 @@ export const useAuthStore = defineStore("auth", () => {
           userStore.setUser(user);
           isAuth.value = true;
           router.push("/");
-          resetForm();
+
+          formsStore.clearForm([login, password]);
         } else {
           isAuthError.value = true;
         }
@@ -40,7 +41,7 @@ export const useAuthStore = defineStore("auth", () => {
         isAuthError.value = true;
       }
     } catch (error) {
-      errorStore.isServerError = true;
+      formsStore.setError(true);
     }
   }
 
@@ -48,11 +49,6 @@ export const useAuthStore = defineStore("auth", () => {
     isAuth.value = false;
     router.push("/");
     userStore.removeUser();
-  }
-
-  function resetForm() {
-    login.value = "";
-    password.value = "";
   }
 
   return {

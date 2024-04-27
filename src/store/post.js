@@ -5,8 +5,9 @@ import { defineStore } from "pinia";
 import { useUserStore } from "@/store/user";
 import { useErrorStore } from "@/store/error";
 import { usePostsStore } from "@/store/posts";
+import { useFormsStore } from "./forms";
 
-import { sendPost, getPost, updatePost, deletePost } from "@/API/posts";
+import { sendPost, getPost, updatePost, deletePostAPI } from "@/API/posts";
 
 export const usePostStore = defineStore("post", () => {
   const title = ref("");
@@ -20,19 +21,7 @@ export const usePostStore = defineStore("post", () => {
   const userStore = useUserStore();
   const errorStore = useErrorStore();
   const postsStore = usePostsStore();
-
-  function createPost() {
-    return {
-      id: "id" + Math.floor(Math.random() * 10000),
-      title: title.value,
-      description: description.value,
-      claps: 0,
-      createdAt: currentDate,
-      updateAt: currentDate,
-      userId: userStore.userId,
-      clappedUsers: [],
-    };
-  }
+  const formsStore = useFormsStore();
 
   function changePost() {
     return {
@@ -41,31 +30,6 @@ export const usePostStore = defineStore("post", () => {
       updateAt: currentDate,
     };
   }
-
-  function clearForm() {
-    title.value = "";
-    description.value = "";
-  }
-
-  async function sendNewPost() {
-    try {
-      success.value = false;
-      errorStore.isServerError = false;
-
-      const newPost = createPost();
-
-      await sendPost(newPost);
-
-      postsStore.posts.push(newPost);
-
-      clearForm();
-
-      success.value = true;
-    } catch (error) {
-      errorStore.isServerError = true;
-    }
-  }
-
   async function getPostByID(id) {
     try {
       const response = await getPost(id);
@@ -100,7 +64,7 @@ export const usePostStore = defineStore("post", () => {
 
   async function deletePostEvt(id) {
     try {
-      await deletePost(id);
+      await deletePostAPI(id);
 
       postsStore.posts = postsStore.posts.filter((post) => post.id !== id);
     } catch (error) {

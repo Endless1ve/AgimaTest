@@ -3,10 +3,10 @@
 
   import { useAuthStore } from "@/store/auth";
   import { useValidationStore } from "@/store/validate";
-  import { useErrorStore } from "@/store/error";
+  import { useFormsStore } from "@/store/forms";
 
   const authStore = useAuthStore();
-  const errorStore = useErrorStore();
+  const formsStore = useFormsStore();
   const validationStore = useValidationStore();
 
   const login = computed(() => authStore.login);
@@ -49,7 +49,7 @@
       </InputError>
       <HiddenError v-else />
     </InputGroup>
-    <FormError v-if="errorStore.isServerError">Ошибка сервера</FormError>
+    <FormError v-if="formsStore.isFormError">Ошибка сервера</FormError>
     <FormError v-if="authStore.isAuthError">
       Неправильный логин или пароль
     </FormError>
