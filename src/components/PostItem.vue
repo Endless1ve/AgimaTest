@@ -4,6 +4,7 @@
   import { useUserStore } from "@/store/user";
 
   import { clapPost } from "@/API/posts";
+  import { getFormattedDate } from "@/API/date";
 
   import PostEditors from "@/components/PostEditors.vue";
   import PostButton from "@/components/UI/PostButton.vue";
@@ -63,6 +64,9 @@
     <h3 class="postTitle">{{ post.title }}</h3>
     <p class="postDescription">{{ post.description }}</p>
     <div class="postActions">
+      <time class="postDate" :datetime="post.updateAt">
+        {{ getFormattedDate(post.updateAt) }}
+      </time>
       <PostButton
         @click="clap"
         v-if="canClap"
@@ -91,8 +95,8 @@
     margin-bottom: 10px;
   }
 
-  .clap {
-    margin-right: auto;
+  .postDate {
+    margin: 10px auto 0 0;
   }
 
   .clapped {
