@@ -1,7 +1,9 @@
 <script setup>
   import router from "@/router";
 
-  import { usePostStore } from "@/store/post";
+  import { usePostsStore } from "@/store/posts";
+
+  import { deletePostAPI } from "@/API/posts";
 
   import PostButton from "@/components/UI/PostButton.vue";
 
@@ -12,10 +14,18 @@
     },
   });
 
-  const postStore = usePostStore();
+  const postsStore = usePostsStore();
 
-  const deletePost = () => {
-    postStore.deletePostEvt($props.postId);
+  const deletePost = async () => {
+    try {
+      await deletePostAPI($props.postId);
+
+      postsStore.posts = postsStore.posts.filter(
+        (post) => post.id !== $props.postId
+      );
+    } catch (error) {
+      console.log(error);
+    }
   };
 </script>
 

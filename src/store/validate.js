@@ -1,5 +1,7 @@
-import { defineStore } from "pinia";
 import { computed } from "vue";
+
+import { defineStore } from "pinia";
+
 import {
   required,
   helpers,
@@ -7,6 +9,7 @@ import {
   minLength,
   maxLength,
 } from "@vuelidate/validators";
+
 import useVuelidate from "@vuelidate/core";
 
 export const useValidationStore = defineStore("validation", () => {

@@ -1,16 +1,16 @@
 <script setup>
-  import { computed, onBeforeUnmount } from "vue";
+  import { computed } from "vue";
 
-  import { useErrorStore } from "@/store/error";
   import { useValidationStore } from "@/store/validate";
-  import { usePostStore } from "@/store/post";
+  import { useFormsStore } from "@/store/forms";
+  import { useUpdatePostStore } from "@/store/updatePost";
 
-  const postStore = usePostStore();
-  const errorStore = useErrorStore();
+  const updatePostStore = useUpdatePostStore();
+  const formsStore = useFormsStore();
   const validationStore = useValidationStore();
 
-  const title = computed(() => postStore.changedTitle);
-  const description = computed(() => postStore.changedDescription);
+  const title = computed(() => updatePostStore.title);
+  const description = computed(() => updatePostStore.description);
 
   const v$ = validationStore.setupValidation(validationStore.postRules, {
     title,
@@ -18,20 +18,15 @@
   });
 
   const submitForm = () => {
-    validationStore.validate(v$, postStore.updateNewPost);
+    validationStore.validate(v$, updatePostStore.updatePost);
   };
-
-  onBeforeUnmount(() => (postStore.success = false));
 </script>
 
 <template>
   <FormBase :formTitle="'Изменить пост'" @submit.prevent="submitForm">
     <InputGroup>
       <InputLabel :name="'title'">Заголовок</InputLabel>
-      <FormInput
-        v-model="postStore.changedTitle"
-        :type="'text'"
-        :id="'title'" />
+      <FormInput v-model="updatePostStore.title" :type="'text'" :id="'title'" />
       <InputError v-if="v$.title.$error">
         {{ v$.title.$errors[0].$message }}
       </InputError>
@@ -39,16 +34,16 @@
     </InputGroup>
     <InputGroup>
       <InputLabel :name="'description'">Описание</InputLabel>
-      <FormTextarea
-        v-model="postStore.changedDescription"
-        :id="'description'" />
+      <FormTextarea v-model="updatePostStore.description" :id="'description'" />
       <InputError v-if="v$.description.$error">
         {{ v$.description.$errors[0].$message }}
       </InputError>
       <HiddenError v-else />
     </InputGroup>
-    <FormSuccess v-if="postStore.success">Пост успешно изменен</FormSuccess>
-    <FormError v-if="errorStore.isServerError">Ошибка сервера</FormError>
+    <FormSuccess v-if="formsStore.isFormSuccess">
+      Пост успешно изменен
+    </FormSuccess>
+    <FormError v-if="formsStore.isFormError">Ошибка сервера</FormError>
     <FormButton>Обновить пост</FormButton>
   </FormBase>
 </template>

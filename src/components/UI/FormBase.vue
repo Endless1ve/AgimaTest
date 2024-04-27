@@ -1,9 +1,20 @@
 <script setup>
+  import { onMounted } from "vue";
+
+  import { useFormsStore } from "@/store/forms";
+
   const $props = defineProps({
     formTitle: {
       type: String,
       required: true,
     },
+  });
+
+  const formsStore = useFormsStore();
+
+  onMounted(() => {
+    formsStore.setError(false);
+    formsStore.setSucces(false);
   });
 </script>
 
