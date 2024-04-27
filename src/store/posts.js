@@ -31,10 +31,19 @@ export const usePostsStore = defineStore("posts", () => {
   }
 
   function setPosts(data) {
-    if (Array.isArray(data)) {
-      posts.value.push(...data);
-    } else posts.value.push(data);
+    posts.value.push(...data);
   }
 
-  return { posts, fetchPosts, setPosts };
+  function addPost(post) {
+    posts.value = [post, ...posts.value.slice(0)];
+  }
+
+  function addUpdatedPost(updatedPost) {
+    const filteredPosts = posts.value.filter(
+      (post) => post.id !== updatedPost.id
+    );
+
+    posts.value = [updatedPost, ...posts.value.slice(0)];
+  }
+  return { posts, fetchPosts, setPosts, addPost, addUpdatedPost };
 });

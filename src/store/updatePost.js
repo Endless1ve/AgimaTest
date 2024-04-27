@@ -45,11 +45,7 @@ export const useUpdatePostStore = defineStore("updatePost", () => {
 
       const response = await updatePostAPI(postId.value, updatedPost);
 
-      const oldPostIndex = postsStore.posts.findIndex(
-        (post) => post.id === postId.value
-      );
-
-      postsStore.posts[oldPostIndex] = response.data;
+      postsStore.addUpdatedPost(response.data);
 
       formsStore.setSucces(true);
     } catch (error) {

@@ -39,7 +39,7 @@ export const useCreatePostStore = defineStore("createPost", () => {
 
       await sendPostAPI(newPost);
 
-      postsStore.setPosts(newPost);
+      postsStore.addPost(newPost);
 
       formsStore.clearForm([title, description]);
 
