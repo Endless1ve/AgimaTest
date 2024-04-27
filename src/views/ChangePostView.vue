@@ -1,15 +1,20 @@
 <script setup>
   import { onMounted } from "vue";
+
   import { useRoute } from "vue-router";
+
+  import { useUpdatePostStore } from "@/store/updatePost";
+
   import ChangePostForm from "@/components/ChangePostForm.vue";
-  import { usePostStore } from "@/store/post";
 
   const route = useRoute();
+
   const postId = route.params.id;
-  const postStore = usePostStore();
+
+  const updatePostStore = useUpdatePostStore();
 
   onMounted(() => {
-    postStore.getPostByID(postId);
+    updatePostStore.getPostByID(postId);
   });
 </script>
 

@@ -23,45 +23,6 @@ export const usePostStore = defineStore("post", () => {
   const postsStore = usePostsStore();
   const formsStore = useFormsStore();
 
-  function changePost() {
-    return {
-      title: changedTitle.value,
-      description: changedDescription.value,
-      updateAt: currentDate,
-    };
-  }
-  async function getPostByID(id) {
-    try {
-      const response = await getPost(id);
-
-      changedTitle.value = response.data.title;
-      changedDescription.value = response.data.description;
-      postId.value = id;
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  async function updateNewPost() {
-    try {
-      success.value = false;
-      errorStore.isServerError = false;
-
-      const newPost = changePost();
-
-      const response = await updatePost(postId.value, newPost);
-
-      const oldPost = postsStore.posts.findIndex(
-        (post) => post.id === postId.value
-      );
-      postsStore.posts[oldPost] = response.data;
-
-      success.value = true;
-    } catch (error) {
-      errorStore.isServerError = true;
-    }
-  }
-
   async function deletePostEvt(id) {
     try {
       await deletePostAPI(id);
@@ -78,8 +39,6 @@ export const usePostStore = defineStore("post", () => {
     changedTitle,
     changedDescription,
     success,
-    sendNewPost,
-    createPost,
     updateNewPost,
     getPostByID,
     deletePostEvt,

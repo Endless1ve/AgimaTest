@@ -4,6 +4,7 @@ import { useFormsStore } from "./forms";
 import { getCurrentDate } from "@/API/date";
 import { useUserStore } from "./user";
 import { usePostsStore } from "./posts";
+import { sendPostAPI } from "@/API/posts";
 
 export const useCreatePostStore = defineStore("createPost", () => {
   const title = ref("");
@@ -28,25 +29,19 @@ export const useCreatePostStore = defineStore("createPost", () => {
 
   async function sendPost() {
     try {
-      //обнуление ошибки и успеха
       formsStore.setSucces(false);
       formsStore.setError(false);
 
-      //создание поста
       const newPost = createPost();
 
-      //отправка поста
-      await sendPost(newPost);
+      await sendPostAPI(newPost);
 
-      //добавление поста в стор
       postsStore.setPosts(newPost);
 
-      //очистка формы
       formsStore.clearForm([title, description]);
-      //установка состояния успеха
+
       formsStore.setSucces(true);
     } catch (error) {
-      console.log(error);
       formsStore.setError(true);
     }
   }

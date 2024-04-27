@@ -12,7 +12,7 @@ import { useFormsStore } from "@/store/forms";
 export const useAuthStore = defineStore("auth", () => {
   const login = ref("");
   const password = ref("");
-  const isAuth = ref(true);
+  const isAuth = ref(false);
   const isAuthError = ref(false);
 
   const userStore = useUserStore();
