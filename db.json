@@ -29,14 +29,12 @@
     {
       "id": "4",
       "title": "Секреты здорового образа жизни",
-      "description": "Откройте для себя секреты здорового образа жизни. Откройте для себя секреты здорового образа жизни.",
+      "description": "Откройте для себя секреты здорового образа жизни. Откройте для себя секреты здорового образа жизни.Откройте для себя секреты здорового образа жизни. Откройте для себя секреты здорового образа жизни.",
       "claps": 36,
       "createdAt": "2023-03-10T15:00:00.000Z",
-      "updateAt": "2024-04-26T16:45:42.072Z",
+      "updateAt": "2024-04-26T17:18:42.745Z",
       "userId": 1,
-      "clappedUsers": [
-        2
-      ]
+      "clappedUsers": [2]
     },
     {
       "id": "5",
@@ -46,9 +44,7 @@
       "createdAt": "2023-04-01T18:30:00.000Z",
       "updateAt": "2023-04-01T18:30:00.000Z",
       "userId": 1,
-      "clappedUsers": [
-        2
-      ]
+      "clappedUsers": [2]
     },
     {
       "id": "6",
@@ -58,22 +54,17 @@
       "createdAt": "2023-05-10T09:00:00.000Z",
       "updateAt": "2023-05-10T09:00:00.000Z",
       "userId": 1,
-      "clappedUsers": [
-        2
-      ]
+      "clappedUsers": [2]
     },
     {
       "id": "7",
       "title": "Искусство медитации: путь к внутреннему спокойствию",
       "description": "Медитация - это искусство обретения внутреннего спокойствия и гармонии. В этом посте мы расскажем о том, как практика медитации может помочь вам найти внутренний покой и гармонию в суете повседневной жизни.",
-      "claps": 51,
+      "claps": 59,
       "createdAt": "2023-06-05T14:15:00.000Z",
       "updateAt": "2023-06-05T14:15:00.000Z",
       "userId": 3,
-      "clappedUsers": [
-        2,
-        1
-      ]
+      "clappedUsers": [2, 1, "1"]
     },
     {
       "id": "8",
@@ -83,9 +74,7 @@
       "createdAt": "2023-07-01T11:45:00.000Z",
       "updateAt": "2023-07-01T11:45:00.000Z",
       "userId": 1,
-      "clappedUsers": [
-        2
-      ]
+      "clappedUsers": [2]
     },
     {
       "id": "9",
@@ -113,9 +102,7 @@
       "createdAt": "2023-10-01T09:45:00.000Z",
       "updateAt": "2023-10-01T09:45:00.000Z",
       "userId": 3,
-      "clappedUsers": [
-        1
-      ]
+      "clappedUsers": [1]
     },
     {
       "id": "12",
@@ -157,19 +144,21 @@
       "id": "16",
       "title": "Романтика в воздухе: полет на воздушном шаре",
       "description": "Полет на воздушном шаре - это уникальный опыт, который запомнится на всю жизнь. В этом посте мы расскажем о романтике и волшебстве полета на воздушном шаре, который подарит вам незабываемые впечатления и эмоции.",
-      "claps": 14,
+      "claps": 15,
       "createdAt": "2024-03-10T12:00:00.000Z",
       "updateAt": "2024-03-10T12:00:00.000Z",
-      "userId": 1
+      "userId": 1,
+      "clappedUsers": [2]
     },
     {
       "id": "17",
       "title": "Вдохновение в каждом уголке города",
       "description": "Городской пейзаж полон вдохновения и красоты. В этом посте мы расскажем о том, как найти вдохновение в каждом уголке города и насладиться его неповторимой атмосферой.",
-      "claps": 24,
+      "claps": 25,
       "createdAt": "2024-04-01T14:30:00.000Z",
       "updateAt": "2024-04-01T14:30:00.000Z",
-      "userId": 1
+      "userId": 1,
+      "clappedUsers": [2]
     },
     {
       "id": "18",
@@ -179,18 +168,17 @@
       "createdAt": "2024-05-10T16:00:00.000Z",
       "updateAt": "2024-05-10T16:00:00.000Z",
       "userId": 1,
-      "clappedUsers": [
-        2
-      ]
+      "clappedUsers": [2]
     },
     {
       "id": "19",
       "title": "Творчество и вдохновение: секреты художника",
       "description": "Художество - это искусство вдохновения и творчества. В этом посте мы поделимся с вами секретами художника и историями о том, как находить вдохновение в повседневной жизни и выражать свои мысли и чувства через искусство.",
-      "claps": 29,
+      "claps": 30,
       "createdAt": "2024-06-05T18:15:00.000Z",
       "updateAt": "2024-06-05T18:15:00.000Z",
-      "userId": 3
+      "userId": 3,
+      "clappedUsers": [1]
     },
     {
       "id": "20",
@@ -452,9 +440,7 @@
       "createdAt": "2026-11-01T08:45:00.000Z",
       "updateAt": "2026-11-01T08:45:00.000Z",
       "userId": 1,
-      "clappedUsers": [
-        2
-      ]
+      "clappedUsers": [2]
     },
     {
       "id": "49",
@@ -464,9 +450,7 @@
       "createdAt": "2026-12-01T10:30:00.000Z",
       "updateAt": "2026-12-01T10:30:00.000Z",
       "userId": 1,
-      "clappedUsers": [
-        2
-      ]
+      "clappedUsers": [2]
     },
     {
       "id": "50",
@@ -476,39 +460,7 @@
       "createdAt": "2027-01-01T12:15:00.000Z",
       "updateAt": "2027-01-01T12:15:00.000Z",
       "userId": 1,
-      "clappedUsers": [
-        2
-      ]
-    },
-    {
-      "id": "id139",
-      "title": "awdawdawdawd",
-      "description": "awdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawdawd",
-      "claps": 0,
-      "createdAt": "2024-04-26T15:53:28.899Z",
-      "updateAt": "2024-04-26T15:53:28.899Z",
-      "userId": 1,
-      "clappedUsers": []
-    },
-    {
-      "id": "id9164",
-      "title": "const route = useRoute(); const postId = route.params.id; console.log(postId);",
-      "description": "const route = useRoute();\nconst postId = route.params.id;\nconsole.log(postId);",
-      "claps": 0,
-      "createdAt": "2024-04-26T16:03:52.931Z",
-      "updateAt": "2024-04-26T16:03:52.931Z",
-      "userId": 1,
-      "clappedUsers": []
-    },
-    {
-      "id": "id4081",
-      "title": "import { usePostsStore } from \"./posts\";",
-      "description": "import { usePostsStore } from \"./posts\";import { usePostsStore } from \"./posts\";import { usePostsStore } from \"./posts\";",
-      "claps": 0,
-      "createdAt": "2024-04-26T16:03:52.931Z",
-      "updateAt": "2024-04-26T16:03:52.931Z",
-      "userId": 1,
-      "clappedUsers": []
+      "clappedUsers": [2]
     }
   ]
 }

@@ -1,6 +1,8 @@
 <script setup>
   import { ref, computed } from "vue";
+
   import { useUserStore } from "@/store/user";
+
   import { clapPost } from "@/API/posts";
 
   import PostEditors from "@/components/PostEditors.vue";
@@ -15,6 +17,7 @@
   });
 
   const userStore = useUserStore();
+
   const claps = ref($props.post.claps);
   const clappedUsers = ref($props.post.clappedUsers);
 

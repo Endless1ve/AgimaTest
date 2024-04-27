@@ -1,9 +1,13 @@
-import { getUser } from "@/API/users";
-import { defineStore } from "pinia";
 import { ref } from "vue";
-import { useErrorStore } from "./error";
-import { useUserStore } from "./user";
+
+import { defineStore } from "pinia";
+
 import router from "@/router";
+
+import { getUser } from "@/API/users";
+
+import { useErrorStore } from "@/store/error";
+import { useUserStore } from "@/store/user";
 
 export const useAuthStore = defineStore("auth", () => {
   const errorStore = useErrorStore();

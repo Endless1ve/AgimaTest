@@ -4,10 +4,8 @@ import {
   required,
   helpers,
   email,
-  minLengthValue,
   minLength,
   maxLength,
-  maxLengthValue,
 } from "@vuelidate/validators";
 import useVuelidate from "@vuelidate/core";
 

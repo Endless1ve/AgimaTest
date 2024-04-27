@@ -5,17 +5,6 @@
   import { useValidationStore } from "@/store/validate";
   import { usePostStore } from "@/store/post";
 
-  import FormBase from "@/components/FormBase.vue";
-  import InputGroup from "@/components/UI/InputGroup.vue";
-  import FormButton from "@/components/UI/FormButton.vue";
-  import InputLabel from "@/components/UI/InputLabel.vue";
-  import FormInput from "@/components/UI/FormInput.vue";
-  import FormTextarea from "@/components/UI/FormTextarea.vue";
-  import InputError from "@/components/UI/InputError.vue";
-  import HiddenError from "@/components/UI/HiddenError.vue";
-  import FormSuccess from "@/components/UI/FormSuccess.vue";
-  import FormError from "@/components/UI/FormError.vue";
-
   const postStore = usePostStore();
   const errorStore = useErrorStore();
   const validationStore = useValidationStore();

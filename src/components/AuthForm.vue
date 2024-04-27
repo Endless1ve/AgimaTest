@@ -1,25 +1,16 @@
 <script setup>
   import { computed } from "vue";
+
   import { useAuthStore } from "@/store/auth";
   import { useValidationStore } from "@/store/validate";
   import { useErrorStore } from "@/store/error";
 
-  import FormBase from "@/components/FormBase.vue";
-  import InputGroup from "@/components/UI/InputGroup.vue";
-
-  import InputError from "@/components/UI/InputError.vue";
-  import InputLabel from "@/components/UI/InputLabel.vue";
-  import FormInput from "@/components/UI/FormInput.vue";
-  import HiddenError from "@/components/UI/HiddenError.vue";
-  import FormButton from "@/components/UI/FormButton.vue";
-  import FormError from "@/components/UI/FormError.vue";
-
-  const auth = useAuthStore();
-  const error = useErrorStore();
+  const authStore = useAuthStore();
+  const errorStore = useErrorStore();
   const validationStore = useValidationStore();
 
-  const login = computed(() => auth.login);
-  const password = computed(() => auth.password);
+  const login = computed(() => authStore.login);
+  const password = computed(() => authStore.password);
 
   const v$ = validationStore.setupValidation(validationStore.authRules, {
     login,
@@ -27,7 +18,7 @@
   });
 
   const submitForm = () => {
-    validationStore.validate(v$, auth.loginUser);
+    validationStore.validate(v$, authStore.loginUser);
   };
 </script>
 
@@ -36,7 +27,7 @@
     <InputGroup>
       <InputLabel :name="'login'">Логин</InputLabel>
       <FormInput
-        v-model="auth.login"
+        v-model="authStore.login"
         :type="'text'"
         :id="'login'"
         autocomplete="email" />
@@ -49,7 +40,7 @@
     <InputGroup>
       <InputLabel :name="'password'">Пароль</InputLabel>
       <FormInput
-        v-model="auth.password"
+        v-model="authStore.password"
         :type="'password'"
         :id="'password'"
         autocomplete="current-password" />
@@ -58,8 +49,10 @@
       </InputError>
       <HiddenError v-else />
     </InputGroup>
-    <FormError v-if="error.isServerError">Ошибка сервера</FormError>
-    <FormError v-if="auth.isAuthError">Неправильный логин или пароль</FormError>
+    <FormError v-if="errorStore.isServerError">Ошибка сервера</FormError>
+    <FormError v-if="authStore.isAuthError">
+      Неправильный логин или пароль
+    </FormError>
     <HiddenError v-else />
     <FormButton>Войти</FormButton>
   </FormBase>

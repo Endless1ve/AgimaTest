@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+  //решение для фикса отсутствия имени компонента
+  defineProps();
+</script>
 
 <template>
   <button class="formButton"><slot></slot></button>
