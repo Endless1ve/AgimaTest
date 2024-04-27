@@ -1,25 +1,25 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "login": "writer@mail.com",
       "password": 123456,
       "role": "writer"
     },
     {
-      "id": 2,
+      "id": "2",
       "login": "reader@mail.com",
       "password": 123456,
       "role": "reader"
     },
     {
-      "id": 3,
+      "id": "3",
       "login": "writer2@mail.com",
       "password": 1234567,
       "role": "writer"
     },
     {
-      "id": 4,
+      "id": "4",
       "login": "reader2@mail.com",
       "password": 1234567,
       "role": "reader"
@@ -496,6 +496,16 @@
       "claps": 0,
       "createdAt": "2024-04-27T16:28:07.068Z",
       "updateAt": "2024-04-27T16:36:59.427Z",
+      "userId": 1,
+      "clappedUsers": []
+    },
+    {
+      "id": "id9350",
+      "title": "FAAAAAAAAAAAAA",
+      "description": "FAAAAAAAAAAAAAFAAAAAAAAAAAAAFAAAAAAAAAAAAAFAAAAAAAAAAAAAFAAAAAAAAAAAAAFAAAAAAAAAAAAAFAAAAAAAAAAAAAFAAAAAAAAAAAAAFAAAAAAAAAAAAAFAAAAAAAAAAAAAFAAAAAAAAAAAAAFAAAAAAAAAAAAAFAAAAAAAAAAAAAFAAAAAAAAAAAAAFAAAAAAAAAAAAAFAAAAAAAAAAAAAFAAAAAAAAAAAAAFAAAAAAAAAAAAA",
+      "claps": 0,
+      "createdAt": "2024-04-27T17:00:43.311Z",
+      "updateAt": "2024-04-27T17:00:43.311Z",
       "userId": 1,
       "clappedUsers": []
     }

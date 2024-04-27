@@ -95,6 +95,11 @@
     margin-bottom: 10px;
   }
 
+  .postDescription {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
   .postDate {
     margin: 10px auto 0 0;
   }
