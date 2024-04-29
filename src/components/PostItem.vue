@@ -2,6 +2,7 @@
   import { ref, computed } from "vue";
 
   import { useUserStore } from "@/store/user";
+  import { useErrorStore } from "@/store/error";
 
   import { clapPostAPI } from "@/API/posts";
   import { getFormattedDate } from "@/API/date";
@@ -18,6 +19,7 @@
   });
 
   const userStore = useUserStore();
+  const errorStore = useErrorStore();
 
   const claps = ref($props.post.claps);
   const clappedUsers = ref($props.post.clappedUsers);
@@ -54,6 +56,7 @@
       claps.value = response.data.claps;
       clappedUsers.value = response.data.clappedUsers;
     } catch (error) {
+      errorStore.renderActionsError();
       console.log(error);
     }
   };

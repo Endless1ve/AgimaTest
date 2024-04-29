@@ -4,11 +4,15 @@ import { defineStore } from "pinia";
 
 import { getPostsAPI } from "@/API/posts";
 
+import { useErrorStore } from "@/store/error";
+
 export const usePostsStore = defineStore("posts", () => {
   const posts = ref([]);
   const page = ref(1);
   const allPages = ref(1);
   const limit = 10;
+
+  const errorStore = useErrorStore();
 
   async function fetchPosts() {
     if (page.value <= allPages.value) {
@@ -24,7 +28,12 @@ export const usePostsStore = defineStore("posts", () => {
         setPosts(response.data.data);
 
         page.value += 1;
+
+        if (!posts.value.length) {
+          throw new Error("No posts");
+        }
       } catch (error) {
+        errorStore.renderPostsError();
         console.log(error);
       }
     }
