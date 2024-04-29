@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "json-server": "json-server --watch db.json",
+    "dev": "npm-run-all --parallel serve json-server"
   },
   "husky": {
     "hooks": {
@@ -20,6 +22,8 @@
     }
   },
   "dependencies": {
+    "@vuelidate/core": "^2.0.3",
+    "@vuelidate/validators": "^2.0.4",
     "axios": "^1.6.8",
     "core-js": "^3.8.3",
     "json-server": "^1.0.0-alpha.23",
@@ -34,6 +38,7 @@
     "@vue/cli-service": "~5.0.0",
     "cz-customizable": "^7.0.0",
     "husky": "^9.0.11",
+    "npm-run-all": "^4.1.5",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0"
   }
