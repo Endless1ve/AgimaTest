@@ -4,7 +4,11 @@ import { getCurrentDate } from "@/utils/date";
 import { useFormsStore } from "@/store/forms";
 import { usePostsStore } from "@/store/posts";
 import { useUserStore } from "@/store/user";
-import { getSinglePostAPI, updatePostAPI } from "@/services/posts/posts";
+import {
+  getSinglePostAPI,
+  sendPostAPI,
+  updatePostAPI,
+} from "@/services/posts/posts";
 
 export const usePostStore = defineStore("post", () => {
   const newPostTitle = ref("");

@@ -2,14 +2,14 @@
   import { computed } from "vue";
 
   import { useFormsStore } from "@/store/forms";
-  import { useCreatePostStore } from "@/store/createPost";
+  import { usePostStore } from "@/store/post";
   import { postRules, setupValidation, validate } from "@/utils/validation";
 
-  const createPostStore = useCreatePostStore();
+  const postStore = usePostStore();
   const formsStore = useFormsStore();
 
-  const title = computed(() => createPostStore.title);
-  const description = computed(() => createPostStore.description);
+  const title = computed(() => postStore.newPostTitle);
+  const description = computed(() => postStore.newPostDescription);
 
   const v$ = setupValidation(postRules, {
     title,
@@ -17,7 +17,7 @@
   });
 
   const submitForm = () => {
-    validate(v$, createPostStore.sendPost);
+    validate(v$, postStore.sendPost);
   };
 </script>
 
@@ -25,7 +25,10 @@
   <FormBase :formTitle="'Создать пост'" @submit.prevent="submitForm">
     <InputGroup>
       <InputLabel :name="'title'">Заголовок</InputLabel>
-      <FormInput v-model="createPostStore.title" :type="'text'" :id="'title'" />
+      <FormInput
+        v-model="postStore.newPostTitle"
+        :type="'text'"
+        :id="'title'" />
       <InputError v-if="v$.title.$error">
         {{ v$.title.$errors[0].$message }}
       </InputError>
@@ -33,7 +36,9 @@
     </InputGroup>
     <InputGroup>
       <InputLabel :name="'description'">Описание</InputLabel>
-      <FormTextarea v-model="createPostStore.description" :id="'description'" />
+      <FormTextarea
+        v-model="postStore.newPostDescription"
+        :id="'description'" />
       <InputError v-if="v$.description.$error">
         {{ v$.description.$errors[0].$message }}
       </InputError>
