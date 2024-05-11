@@ -2,9 +2,7 @@
   import { ref, computed } from "vue";
 
   import { useUserStore } from "@/store/user";
-  import { useErrorStore } from "@/store/error";
 
-  import { clapPostAPI } from "@/services/posts/posts";
   import { getFormattedDate } from "@/utils/date";
 
   import PostEditors from "@/components/PostEditors.vue";
