@@ -23,23 +23,20 @@
 </script>
 
 <template>
-  <FormBase :formTitle="'Изменить пост'" @submit.prevent="submitForm">
+  <FormBase formTitle="Изменить пост" @submit.prevent="submitForm">
     <InputGroup>
-      <InputLabel :name="'title'">Заголовок</InputLabel>
-      <FormInput
-        v-model="postStore.updatePostTitle"
-        :type="'text'"
-        :id="'title'" />
+      <InputLabel name="title">Заголовок</InputLabel>
+      <FormInput v-model="postStore.updatePostTitle" type="text" id="title" />
       <InputError v-if="v$.title.$error">
         {{ v$.title.$errors[0].$message }}
       </InputError>
       <HiddenError v-else />
     </InputGroup>
     <InputGroup>
-      <InputLabel :name="'description'">Описание</InputLabel>
+      <InputLabel name="description">Описание</InputLabel>
       <FormTextarea
         v-model="postStore.updatePostDescription"
-        :id="'description'" />
+        id="description" />
       <InputError v-if="v$.description.$error">
         {{ v$.description.$errors[0].$message }}
       </InputError>

@@ -23,13 +23,13 @@
 </script>
 
 <template>
-  <FormBase :formTitle="'Авторизоваться'" @submit.prevent="submitForm">
+  <FormBase formTitle="Авторизоваться" @submit.prevent="submitForm">
     <InputGroup>
-      <InputLabel :name="'login'">Логин</InputLabel>
+      <InputLabel name="login">Логин</InputLabel>
       <FormInput
         v-model="authStore.login"
-        :type="'text'"
-        :id="'login'"
+        type="text"
+        id="login"
         autocomplete="email" />
       <InputError v-if="v$.login.$error">
         {{ v$.login.$errors[0].$message }}
@@ -38,11 +38,11 @@
     </InputGroup>
 
     <InputGroup>
-      <InputLabel :name="'password'">Пароль</InputLabel>
+      <InputLabel name="password">Пароль</InputLabel>
       <FormInput
         v-model="authStore.password"
-        :type="'password'"
-        :id="'password'"
+        type="password"
+        id="password"
         autocomplete="current-password" />
       <InputError v-if="v$.password.$error">
         {{ v$.password.$errors[0].$message }}
