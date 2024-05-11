@@ -1,10 +1,15 @@
 import { ref } from "vue";
+
 import { defineStore } from "pinia";
+
 import { getCurrentDate } from "@/utils/date";
 import { useFormsStore } from "@/store/forms";
 import { usePostsStore } from "@/store/posts";
 import { useUserStore } from "@/store/user";
+import { useErrorStore } from "@/store/error";
+
 import {
+  deletePostAPI,
   getSinglePostAPI,
   sendPostAPI,
   updatePostAPI,
@@ -20,6 +25,7 @@ export const usePostStore = defineStore("post", () => {
   const formsStore = useFormsStore();
   const userStore = useUserStore();
   const postsStore = usePostsStore();
+  const errorStore = useErrorStore();
 
   function createPost() {
     return {
@@ -92,6 +98,16 @@ export const usePostStore = defineStore("post", () => {
     }
   }
 
+  async function deletePost(postId) {
+    try {
+      await deletePostAPI(postId);
+
+      postsStore.filterPostsByID(postId);
+    } catch (error) {
+      errorStore.renderActionsError();
+    }
+  }
+
   return {
     newPostTitle,
     newPostDescription,
@@ -100,5 +116,6 @@ export const usePostStore = defineStore("post", () => {
     sendPost,
     getPostByID,
     updatePost,
+    deletePost,
   };
 });
