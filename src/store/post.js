@@ -9,6 +9,7 @@ import { useUserStore } from "@/store/user";
 import { useErrorStore } from "@/store/error";
 
 import {
+  clapPostAPI,
   deletePostAPI,
   getSinglePostAPI,
   sendPostAPI,
@@ -108,6 +109,22 @@ export const usePostStore = defineStore("post", () => {
     }
   }
 
+  async function clapPost(postId, clappedUsers, claps) {
+    try {
+      const newClappedUsers = clappedUsers ? [...clappedUsers] : [];
+
+      if (!newClappedUsers.includes(userStore.userId)) {
+        newClappedUsers.push(userStore.userId);
+      }
+      return await clapPostAPI(postId, {
+        claps: claps + 1,
+        clappedUsers: newClappedUsers,
+      });
+    } catch (error) {
+      errorStore.renderActionsError();
+    }
+  }
+
   return {
     newPostTitle,
     newPostDescription,
@@ -117,5 +134,6 @@ export const usePostStore = defineStore("post", () => {
     getPostByID,
     updatePost,
     deletePost,
+    clapPost,
   };
 });

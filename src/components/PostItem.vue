@@ -10,6 +10,7 @@
   import PostEditors from "@/components/PostEditors.vue";
   import PostButton from "@/components/UI/PostButton.vue";
   import ClapIcon from "@/components/UI/icons/ClapIcon.vue";
+  import { usePostStore } from "@/store/post";
 
   const $props = defineProps({
     post: {
@@ -19,7 +20,7 @@
   });
 
   const userStore = useUserStore();
-  const errorStore = useErrorStore();
+  const postStore = usePostStore();
 
   const claps = ref($props.post.claps);
   const clappedUsers = ref($props.post.clappedUsers);
@@ -41,24 +42,14 @@
   });
 
   const clap = async () => {
-    try {
-      const newClappedUsers = clappedUsers.value ? [...clappedUsers.value] : [];
+    const response = await postStore.clapPost(
+      $props.post.id,
+      clappedUsers.value,
+      claps.value
+    );
 
-      if (!newClappedUsers.includes(userStore.userId)) {
-        newClappedUsers.push(userStore.userId);
-      }
-
-      const response = await clapPostAPI($props.post.id, {
-        claps: claps.value + 1,
-        clappedUsers: newClappedUsers,
-      });
-
-      claps.value = response.data.claps;
-      clappedUsers.value = response.data.clappedUsers;
-    } catch (error) {
-      errorStore.renderActionsError();
-      console.log(error);
-    }
+    claps.value = response.data.claps;
+    clappedUsers.value = response.data.clappedUsers;
   };
 </script>
 
