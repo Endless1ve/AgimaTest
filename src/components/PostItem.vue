@@ -5,7 +5,7 @@
   import { useErrorStore } from "@/store/error";
 
   import { clapPostAPI } from "@/API/posts";
-  import { getFormattedDate } from "@/API/date";
+  import { getFormattedDate } from "@/utils/date";
 
   import PostEditors from "@/components/PostEditors.vue";
   import PostButton from "@/components/UI/PostButton.vue";
