@@ -9,24 +9,13 @@
       type: String,
       required: true,
     },
-    modelValue: {
-      type: [String, Number],
-      required: true,
-    },
   });
 
-  const handleChange = (event) => {
-    emit("update:modelValue", event.target.value);
-  };
+  const model = defineModel();
 </script>
 
 <template>
-  <input
-    class="formInput"
-    :value="modelValue"
-    @input="handleChange"
-    :type="type"
-    :id="id" />
+  <input class="formInput" v-model="model" :type="type" :id="id" />
 </template>
 
 <style lang="scss" scoped>
