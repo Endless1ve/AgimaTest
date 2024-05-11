@@ -6,7 +6,7 @@ import { useFormsStore } from "@/store/forms";
 import { useUserStore } from "@/store/user";
 import { usePostsStore } from "@/store/posts";
 
-import { getCurrentDate } from "@/API/date";
+import { getCurrentDate } from "@/utils/date";
 import { sendPostAPI } from "@/API/posts";
 
 export const useCreatePostStore = defineStore("createPost", () => {
