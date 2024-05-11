@@ -3,10 +3,10 @@ import { ref } from "vue";
 import { defineStore } from "pinia";
 
 import { getCurrentDate } from "@/utils/date";
-import { getPostAPI, updatePostAPI } from "@/API/posts";
 
 import { useFormsStore } from "@/store/forms";
 import { usePostsStore } from "@/store/posts";
+import { getSinglePostAPI, updatePostAPI } from "@/services/posts/posts";
 
 export const useUpdatePostStore = defineStore("updatePost", () => {
   const title = ref("");
@@ -18,7 +18,7 @@ export const useUpdatePostStore = defineStore("updatePost", () => {
 
   async function getPostByID(id) {
     try {
-      const response = await getPostAPI(id);
+      const response = await getSinglePostAPI(id);
 
       title.value = response.data.title;
       description.value = response.data.description;
