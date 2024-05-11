@@ -2,23 +2,23 @@
   import { computed } from "vue";
 
   import { useAuthStore } from "@/store/auth";
-  import { useValidationStore } from "@/store/validate";
   import { useFormsStore } from "@/store/forms";
+
+  import { authRules, setupValidation, validate } from "@/utils/validation";
 
   const authStore = useAuthStore();
   const formsStore = useFormsStore();
-  const validationStore = useValidationStore();
 
   const login = computed(() => authStore.login);
   const password = computed(() => authStore.password);
 
-  const v$ = validationStore.setupValidation(validationStore.authRules, {
+  const v$ = setupValidation(authRules, {
     login,
     password,
   });
 
   const submitForm = () => {
-    validationStore.validate(v$, authStore.loginUser);
+    validate(v$, authStore.loginUser);
   };
 </script>
 

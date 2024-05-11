@@ -1,24 +1,23 @@
 <script setup>
   import { computed } from "vue";
 
-  import { useValidationStore } from "@/store/validate";
   import { useFormsStore } from "@/store/forms";
   import { useUpdatePostStore } from "@/store/updatePost";
+  import { postRules, setupValidation, validate } from "@/utils/validation";
 
   const updatePostStore = useUpdatePostStore();
   const formsStore = useFormsStore();
-  const validationStore = useValidationStore();
 
   const title = computed(() => updatePostStore.title);
   const description = computed(() => updatePostStore.description);
 
-  const v$ = validationStore.setupValidation(validationStore.postRules, {
+  const v$ = setupValidation(postRules, {
     title,
     description,
   });
 
   const submitForm = () => {
-    validationStore.validate(v$, updatePostStore.updatePost);
+    validate(v$, updatePostStore.updatePost);
   };
 </script>
 
