@@ -2,8 +2,7 @@
   import router from "@/router";
 
   import { usePostsStore } from "@/store/posts";
-
-  import { deletePostAPI } from "@/API/posts";
+  import { deletePostAPI } from "@/services/posts/posts";
 
   import PostButton from "@/components/UI/PostButton.vue";
 

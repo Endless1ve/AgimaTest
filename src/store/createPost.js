@@ -7,7 +7,7 @@ import { useUserStore } from "@/store/user";
 import { usePostsStore } from "@/store/posts";
 
 import { getCurrentDate } from "@/utils/date";
-import { sendPostAPI } from "@/API/posts";
+import { sendPostAPI } from "@/services/posts/posts";
 
 export const useCreatePostStore = defineStore("createPost", () => {
   const title = ref("");

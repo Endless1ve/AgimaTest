@@ -2,9 +2,8 @@ import { ref } from "vue";
 
 import { defineStore } from "pinia";
 
-import { getPostsAPI } from "@/API/posts";
-
 import { useErrorStore } from "@/store/error";
+import { getPostsAPI } from "@/services/posts/posts";
 
 export const usePostsStore = defineStore("posts", () => {
   const posts = ref([]);
