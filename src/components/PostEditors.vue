@@ -21,7 +21,10 @@
 
 <template>
   <div class="postEditors">
-    <PostButton @click="router.push(`/changePost/${postId}`)">
+    <PostButton
+      @click="
+        router.push({ name: 'changePost', params: { id: $props.postId } })
+      ">
       Изменить
     </PostButton>
     <PostButton @click="deletePost">Удалить</PostButton>
