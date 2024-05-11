@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "@/views/HomeView.vue";
+
 import { useAuthStore } from "@/store/auth";
 import { useUserStore } from "@/store/user";
+
+import HomeView from "@/views/HomeView.vue";
 
 const routes = [
   {
