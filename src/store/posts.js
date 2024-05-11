@@ -52,7 +52,7 @@ export const usePostsStore = defineStore("posts", () => {
       (post) => post.id !== updatedPost.id
     );
 
-    posts.value = [updatedPost, filteredPosts.slice(0)];
+    posts.value = [updatedPost, ...filteredPosts.slice(0)];
   }
   return { posts, fetchPosts, setPosts, addPost, addUpdatedPost };
 });

@@ -2,7 +2,7 @@ import { ref } from "vue";
 
 import { defineStore } from "pinia";
 
-import { getCurrentDate } from "@/API/date";
+import { getCurrentDate } from "@/utils/date";
 import { getPostAPI, updatePostAPI } from "@/API/posts";
 
 import { useFormsStore } from "@/store/forms";
