@@ -3,7 +3,7 @@
 
   import { useRoute } from "vue-router";
 
-  import { useUpdatePostStore } from "@/store/updatePost";
+  import { usePostStore } from "@/store/post";
 
   import ChangePostForm from "@/components/ChangePostForm.vue";
 
@@ -11,10 +11,10 @@
 
   const postId = route.params.id;
 
-  const updatePostStore = useUpdatePostStore();
+  const postStore = usePostStore();
 
   onMounted(() => {
-    updatePostStore.getPostByID(postId);
+    postStore.getPostByID(postId);
   });
 </script>
 

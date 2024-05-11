@@ -53,5 +53,16 @@ export const usePostsStore = defineStore("posts", () => {
 
     posts.value = [updatedPost, ...filteredPosts.slice(0)];
   }
-  return { posts, fetchPosts, setPosts, addPost, addUpdatedPost };
+
+  function filterPostsByID(id) {
+    posts.value = posts.value.filter((post) => post.id !== id);
+  }
+  return {
+    posts,
+    fetchPosts,
+    setPosts,
+    addPost,
+    addUpdatedPost,
+    filterPostsByID,
+  };
 });
