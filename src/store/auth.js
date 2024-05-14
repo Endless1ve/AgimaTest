@@ -4,10 +4,9 @@ import { defineStore } from "pinia";
 
 import router from "@/router";
 
-import { getUser } from "@/API/users";
-
 import { useUserStore } from "@/store/user";
 import { useFormsStore } from "@/store/forms";
+import { getUser } from "@/services/user/user";
 
 export const useAuthStore = defineStore("auth", () => {
   const login = ref("");

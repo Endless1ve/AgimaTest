@@ -1,40 +1,42 @@
 <script setup>
   import { computed } from "vue";
 
-  import { useValidationStore } from "@/store/validate";
   import { useFormsStore } from "@/store/forms";
-  import { useUpdatePostStore } from "@/store/updatePost";
 
-  const updatePostStore = useUpdatePostStore();
+  import { postRules, setupValidation, validate } from "@/utils/validation";
+  import { usePostStore } from "@/store/post";
+
+  const postStore = usePostStore();
   const formsStore = useFormsStore();
-  const validationStore = useValidationStore();
 
-  const title = computed(() => updatePostStore.title);
-  const description = computed(() => updatePostStore.description);
+  const title = computed(() => postStore.updatePostTitle);
+  const description = computed(() => postStore.updatePostDescription);
 
-  const v$ = validationStore.setupValidation(validationStore.postRules, {
+  const v$ = setupValidation(postRules, {
     title,
     description,
   });
 
   const submitForm = () => {
-    validationStore.validate(v$, updatePostStore.updatePost);
+    validate(v$, postStore.updatePost);
   };
 </script>
 
 <template>
-  <FormBase :formTitle="'Изменить пост'" @submit.prevent="submitForm">
+  <FormBase formTitle="Изменить пост" @submit.prevent="submitForm">
     <InputGroup>
-      <InputLabel :name="'title'">Заголовок</InputLabel>
-      <FormInput v-model="updatePostStore.title" :type="'text'" :id="'title'" />
+      <InputLabel name="title">Заголовок</InputLabel>
+      <FormInput v-model="postStore.updatePostTitle" type="text" id="title" />
       <InputError v-if="v$.title.$error">
         {{ v$.title.$errors[0].$message }}
       </InputError>
       <HiddenError v-else />
     </InputGroup>
     <InputGroup>
-      <InputLabel :name="'description'">Описание</InputLabel>
-      <FormTextarea v-model="updatePostStore.description" :id="'description'" />
+      <InputLabel name="description">Описание</InputLabel>
+      <FormTextarea
+        v-model="postStore.updatePostDescription"
+        id="description" />
       <InputError v-if="v$.description.$error">
         {{ v$.description.$errors[0].$message }}
       </InputError>

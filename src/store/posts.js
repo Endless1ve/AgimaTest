@@ -2,9 +2,8 @@ import { ref } from "vue";
 
 import { defineStore } from "pinia";
 
-import { getPostsAPI } from "@/API/posts";
-
 import { useErrorStore } from "@/store/error";
+import { getPostsAPI } from "@/services/posts/posts";
 
 export const usePostsStore = defineStore("posts", () => {
   const posts = ref([]);
@@ -52,7 +51,18 @@ export const usePostsStore = defineStore("posts", () => {
       (post) => post.id !== updatedPost.id
     );
 
-    posts.value = [updatedPost, filteredPosts.slice(0)];
+    posts.value = [updatedPost, ...filteredPosts.slice(0)];
   }
-  return { posts, fetchPosts, setPosts, addPost, addUpdatedPost };
+
+  function filterPostsByID(id) {
+    posts.value = posts.value.filter((post) => post.id !== id);
+  }
+  return {
+    posts,
+    fetchPosts,
+    setPosts,
+    addPost,
+    addUpdatedPost,
+    filterPostsByID,
+  };
 });
