@@ -9,17 +9,17 @@
 
 <template>
   <header class="header">
-    <p class="headerItem" @click="router.push('home')">Посты</p>
+    <p class="headerItem" @click="router.push({ name: 'home' })">Посты</p>
     <p
       v-if="userStore.canCreatePost"
       class="headerItem"
-      @click="router.push('create')">
+      @click="router.push({ name: 'create' })">
       Создать пост
     </p>
     <p
       v-if="!authStore.isAuth"
       class="headerItem"
-      @click="router.push('login')">
+      @click="router.push({ name: 'login' })">
       Войти
     </p>
     <div v-else class="profile">
