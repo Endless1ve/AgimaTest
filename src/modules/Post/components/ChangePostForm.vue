@@ -2,13 +2,13 @@
   import { computed } from "vue";
 
   import { useFormsStore } from "@/store/forms";
+  import { usePostStore } from "../store/post";
 
   import {
     postRules,
     setupValidation,
     validate,
   } from "@/shared/utils/validation";
-  import { usePostStore } from "@/store/post";
 
   const postStore = usePostStore();
   const formsStore = useFormsStore();

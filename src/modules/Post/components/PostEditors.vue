@@ -1,7 +1,7 @@
 <script setup>
   import router from "@/app/router";
 
-  import { usePostStore } from "@/store/post";
+  import { usePostStore } from "../store/post";
 
   import PostButton from "@/shared/UI/PostButton.vue";
 

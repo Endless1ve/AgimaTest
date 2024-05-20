@@ -2,7 +2,7 @@
   import { computed } from "vue";
 
   import { useFormsStore } from "@/store/forms";
-  import { usePostStore } from "@/store/post";
+  import { usePostStore } from "../store/post";
   import {
     postRules,
     setupValidation,

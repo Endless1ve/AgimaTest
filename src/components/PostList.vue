@@ -6,7 +6,7 @@
 
   import { useIntersectionObserver } from "@/shared/hooks/useIntersectionObserver";
 
-  import PostItem from "@/components/PostItem.vue";
+  import { PostItem } from "@/modules/Post";
   import ErrorText from "@/shared/UI/ErrorText.vue";
   import ErrorBlock from "@/shared/UI/ErrorBlock.vue";
 

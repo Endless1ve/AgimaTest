@@ -1,5 +1,5 @@
 <script setup>
-  import CreatePostForm from "@/components/CreatePostForm.vue";
+  import { CreatePostForm } from "@/modules/Post";
 </script>
 
 <template>

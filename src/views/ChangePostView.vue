@@ -3,9 +3,7 @@
 
   import { useRoute } from "vue-router";
 
-  import { usePostStore } from "@/store/post";
-
-  import ChangePostForm from "@/components/ChangePostForm.vue";
+  import { ChangePostForm, usePostStore } from "@/modules/Post";
 
   const route = useRoute();
 
