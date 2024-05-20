@@ -1,7 +1,7 @@
 <script setup>
   import { ref, computed } from "vue";
 
-  import { useUserStore } from "@/store/user";
+  import { useUserStore } from "@/modules/User";
 
   import { getFormattedDate } from "@/shared/utils/date";
 

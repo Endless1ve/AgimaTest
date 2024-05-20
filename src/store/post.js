@@ -5,7 +5,7 @@ import { defineStore } from "pinia";
 import { getCurrentDate } from "@/shared/utils/date";
 import { useFormsStore } from "@/store/forms";
 import { usePostsStore } from "@/store/posts";
-import { useUserStore } from "@/store/user";
+import { useUserStore } from "@/modules/User";
 import { useErrorStore } from "@/store/error";
 
 import {

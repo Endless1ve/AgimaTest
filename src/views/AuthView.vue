@@ -1,5 +1,7 @@
 <script setup>
-  import AuthForm from "@/components/AuthForm.vue";
+  import { AuthForm } from "@/modules/Auth";
+
+  AuthForm;
 </script>
 
 <template>

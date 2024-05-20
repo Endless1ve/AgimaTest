@@ -1,7 +1,7 @@
 <script setup>
   import { computed } from "vue";
 
-  import { useAuthStore } from "@/store/auth";
+  import { useAuthStore } from "../store/auth";
   import { useFormsStore } from "@/store/forms";
 
   import {

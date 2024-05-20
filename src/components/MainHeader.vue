@@ -1,8 +1,7 @@
 <script setup>
   import router from "@/app/router";
-
-  import { useAuthStore } from "@/store/auth";
-  import { useUserStore } from "@/store/user";
+  import { useAuthStore } from "@/modules/Auth";
+  import { useUserStore } from "@/modules/User";
 
   const authStore = useAuthStore();
   const userStore = useUserStore();
