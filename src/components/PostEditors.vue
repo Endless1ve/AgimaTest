@@ -1,5 +1,5 @@
 <script setup>
-  import router from "@/router";
+  import router from "@/app/router";
 
   import { usePostStore } from "@/store/post";
 

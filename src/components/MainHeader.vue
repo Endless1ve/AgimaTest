@@ -1,5 +1,5 @@
 <script setup>
-  import router from "@/router";
+  import router from "@/app/router";
 
   import { useAuthStore } from "@/store/auth";
   import { useUserStore } from "@/store/user";

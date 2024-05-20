@@ -2,7 +2,7 @@ import { ref } from "vue";
 
 import { defineStore } from "pinia";
 
-import router from "@/router";
+import router from "@/app/router";
 
 import { useUserStore } from "@/store/user";
 import { useFormsStore } from "@/store/forms";
