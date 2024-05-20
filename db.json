@@ -484,6 +484,16 @@
         2,
         1
       ]
+    },
+    {
+      "id": "id4115",
+      "title": "awdawd",
+      "description": "awdawdawdaw\nimport { usePostsStore } from \"@/modules/Posts\";\nimport { usePostsStore } from \"@/modules/Posts\";\nimport { usePostsStore } from \"@/modules/Posts\";\nimport { usePostsStore } from \"@/modules/Posts\";\n",
+      "claps": 0,
+      "createdAt": "2024-05-20T08:41:38.441Z",
+      "updateAt": "2024-05-20T08:41:38.441Z",
+      "userId": 1,
+      "clappedUsers": []
     }
   ]
 }

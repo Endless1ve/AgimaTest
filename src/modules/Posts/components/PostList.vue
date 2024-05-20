@@ -1,8 +1,8 @@
 <script setup>
   import { ref, onMounted } from "vue";
 
-  import { usePostsStore } from "@/store/posts";
   import { useErrorStore } from "@/store/error";
+  import { usePostsStore } from "../store/posts";
 
   import { useIntersectionObserver } from "@/shared/hooks/useIntersectionObserver";
 
