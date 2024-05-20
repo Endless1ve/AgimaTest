@@ -1,14 +1,13 @@
 <script setup>
   import { ref, onMounted } from "vue";
 
-  import { useErrorStore } from "@/store/error";
+  import { ErrorBlock, useErrorStore } from "@/modules/Errors";
   import { usePostsStore } from "../store/posts";
 
   import { useIntersectionObserver } from "@/shared/hooks/useIntersectionObserver";
 
   import { PostItem } from "@/modules/Post";
   import ErrorText from "@/shared/UI/ErrorText.vue";
-  import ErrorBlock from "@/shared/UI/ErrorBlock.vue";
 
   const postsStore = usePostsStore();
   const errorStore = useErrorStore();

@@ -6,7 +6,7 @@ import { getCurrentDate } from "@/shared/utils/date";
 import { useFormsStore } from "@/store/forms";
 import { usePostsStore } from "@/modules/Posts";
 import { useUserStore } from "@/modules/User";
-import { useErrorStore } from "@/store/error";
+import { useErrorStore } from "@/modules/Errors";
 
 import {
   clapPostAPI,

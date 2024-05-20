@@ -1,5 +1,5 @@
 <script setup>
-  import { useErrorStore } from "@/store/error";
+  import { useErrorStore } from "@/modules/Errors";
 
   import ErrorText from "@/shared/UI/ErrorText.vue";
   import ErrorButton from "@/shared/UI/ErrorButton.vue";

@@ -2,7 +2,7 @@ import { ref } from "vue";
 
 import { defineStore } from "pinia";
 
-import { useErrorStore } from "@/store/error";
+import { useErrorStore } from "@/modules/Errors";
 import { getPostsAPI } from "@/shared/services/posts/posts";
 
 export const usePostsStore = defineStore("posts", () => {
