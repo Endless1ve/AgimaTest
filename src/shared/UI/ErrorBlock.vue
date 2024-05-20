@@ -1,8 +1,8 @@
 <script setup>
   import { useErrorStore } from "@/store/error";
 
-  import ErrorText from "@/components/UI/ErrorText.vue";
-  import ErrorButton from "@/components/UI/ErrorButton.vue";
+  import ErrorText from "@/shared/UI/ErrorText.vue";
+  import ErrorButton from "@/shared/UI/ErrorButton.vue";
 
   const errorStore = useErrorStore();
 </script>

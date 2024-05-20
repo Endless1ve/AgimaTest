@@ -4,11 +4,11 @@
   import { usePostsStore } from "@/store/posts";
   import { useErrorStore } from "@/store/error";
 
-  import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+  import { useIntersectionObserver } from "@/shared/hooks/useIntersectionObserver";
 
   import PostItem from "@/components/PostItem.vue";
-  import ErrorText from "@/components/UI/ErrorText.vue";
-  import ErrorBlock from "@/components/UI/ErrorBlock.vue";
+  import ErrorText from "@/shared/UI/ErrorText.vue";
+  import ErrorBlock from "@/shared/UI/ErrorBlock.vue";
 
   const postsStore = usePostsStore();
   const errorStore = useErrorStore();

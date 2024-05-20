@@ -3,11 +3,11 @@
 
   import { useUserStore } from "@/store/user";
 
-  import { getFormattedDate } from "@/utils/date";
+  import { getFormattedDate } from "@/shared/utils/date";
 
   import PostEditors from "@/components/PostEditors.vue";
-  import PostButton from "@/components/UI/PostButton.vue";
-  import ClapIcon from "@/components/UI/icons/ClapIcon.vue";
+  import PostButton from "@/shared/UI/PostButton.vue";
+  import ClapIcon from "@/shared/UI/icons/ClapIcon.vue";
   import { usePostStore } from "@/store/post";
 
   const $props = defineProps({

@@ -2,7 +2,7 @@ import { ref } from "vue";
 
 import { defineStore } from "pinia";
 
-import { getCurrentDate } from "@/utils/date";
+import { getCurrentDate } from "@/shared/utils/date";
 import { useFormsStore } from "@/store/forms";
 import { usePostsStore } from "@/store/posts";
 import { useUserStore } from "@/store/user";
@@ -14,7 +14,7 @@ import {
   getSinglePostAPI,
   sendPostAPI,
   updatePostAPI,
-} from "@/services/posts/posts";
+} from "@/shared/services/posts/posts";
 
 export const usePostStore = defineStore("post", () => {
   const newPostTitle = ref("");

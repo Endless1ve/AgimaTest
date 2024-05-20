@@ -4,7 +4,11 @@
   import { useAuthStore } from "@/store/auth";
   import { useFormsStore } from "@/store/forms";
 
-  import { authRules, setupValidation, validate } from "@/utils/validation";
+  import {
+    authRules,
+    setupValidation,
+    validate,
+  } from "@/shared/utils/validation";
 
   const authStore = useAuthStore();
   const formsStore = useFormsStore();

@@ -3,7 +3,11 @@
 
   import { useFormsStore } from "@/store/forms";
 
-  import { postRules, setupValidation, validate } from "@/utils/validation";
+  import {
+    postRules,
+    setupValidation,
+    validate,
+  } from "@/shared/utils/validation";
   import { usePostStore } from "@/store/post";
 
   const postStore = usePostStore();

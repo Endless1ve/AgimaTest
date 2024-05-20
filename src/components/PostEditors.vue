@@ -3,7 +3,7 @@
 
   import { usePostStore } from "@/store/post";
 
-  import PostButton from "@/components/UI/PostButton.vue";
+  import PostButton from "@/shared/UI/PostButton.vue";
 
   const $props = defineProps({
     postId: {
